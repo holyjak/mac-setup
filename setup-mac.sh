@@ -65,6 +65,8 @@ apps=(
   vlc
   skype
   rowanj-gitx
+  emacs
+  tunnelblick
 )
 
 # Install apps to /Applications
@@ -110,8 +112,9 @@ atom_plugins=(
   lodash-snippets
   javascript-snippets
   script
-  refactor
-  js-refactor
+#  refactor  js-refactor # BROKEN AS OF 2015-04-17
+  npm-autocomplete
+  autocomplete-snippets
   test-status
   editorconfig
   language-puppet
@@ -128,7 +131,18 @@ if [ ! -d ~/dotfiles ]; then
   ( cd ~/dotfiles; git remote set-url origin git@github.com:jakubholynet/dotfiles.git )
   ~/dotfiles/symlink.sh
 fi
+
 #---------------------------------
+
+if which java > /dev/null; then 
+  brew install leiningen
+  lein --version &> /dev/null # download Clojure if needed 
+else
+  echo "WARN: Not installing Leiningen - no java found"
+fi
+
+#---------------------------------
+
 ## TODO: Update path in .profile
 # $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # Add rbenv to bash, zsh, fish: https://coderwall.com/p/6bqzvq/sudoless-brewed-rubygems-on-os-x
