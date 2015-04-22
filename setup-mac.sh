@@ -67,6 +67,7 @@ apps=(
   rowanj-gitx
   emacs
   tunnelblick
+  p4merge
 )
 
 # Install apps to /Applications
