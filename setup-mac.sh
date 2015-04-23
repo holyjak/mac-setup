@@ -39,6 +39,7 @@ binaries=(
  nvm
  editorconfig
  fish
+ wget
 )
 
 echo "installing binaries..."
