@@ -87,8 +87,9 @@ source $(brew --prefix nvm)/nvm.sh
 set -u
 set -e
 
-nvm install v0.10       # FIXME Does not work for soem reason?!
+nvm install v0.10
 nvm alias default v0.10
+npm install -g jshint
 
 #---------------------------------
 
@@ -109,7 +110,8 @@ echo "Installing Atom plugins..."
 
 atom_plugins=(
   linter
-  jshint
+  #jshint
+  linter-jshint # Requires 'npm install -g jshint' ?
   react
   lodash-snippets
   javascript-snippets
