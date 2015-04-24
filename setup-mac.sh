@@ -81,6 +81,8 @@ brew cask install --appdir="/Applications" ${apps[@]}
 #---------------------------------
 echo "Installing Node.js ... "
 export NVM_DIR=~/.nvm
+# Add a link to fix nvm.fish:
+ln -s $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
 set +u
 set +e
 source $(brew --prefix nvm)/nvm.sh
