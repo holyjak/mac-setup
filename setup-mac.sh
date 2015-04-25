@@ -69,6 +69,7 @@ apps=(
   emacs
   tunnelblick
   p4merge
+  spideroak
 )
 
 # Install apps to /Applications
