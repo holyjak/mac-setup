@@ -40,6 +40,7 @@ binaries=(
  editorconfig
  fish
  wget
+ jq
 )
 
 echo "installing binaries..."
