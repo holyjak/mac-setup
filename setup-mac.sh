@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash --norc
 set -e
 set -u
 
@@ -83,7 +83,7 @@ brew cask install --appdir="/Applications" ${apps[@]}
 echo "Installing Node.js ... "
 export NVM_DIR=~/.nvm
 # Add a link to fix nvm.fish:
-ln -s $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
+ln -fs $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
 set +u
 set +e
 source $(brew --prefix nvm)/nvm.sh
@@ -131,16 +131,6 @@ atom_plugins=(
 apm install ${atom_plugins[@]}
 #---------------------------------
 
-echo "Setting up dotfiles..."
-
-if [ ! -d ~/dotfiles ]; then
-  git clone -b dotf https://github.com/jakubholynet/dotfiles.git ~/dotfiles
-  ( cd ~/dotfiles; git remote set-url origin git@github.com:jakubholynet/dotfiles.git )
-  ~/dotfiles/symlink.sh
-fi
-
-#---------------------------------
-
 if which java > /dev/null; then 
   brew install leiningen
   lein --version &> /dev/null # download Clojure if needed 
@@ -150,12 +140,33 @@ fi
 
 #---------------------------------
 
+## Emacs Live
+if [ ! -d ~/.emacs.d ]; then
+  echo "INFO Installing Emacs Live ..."
+  git clone git@github.com:overtone/emacs-live.git ~/.emacs.d
+else
+  echo "NOTICE ~/.emacs.d/ present, not installing Emacs Live"
+fi
+
+#--------------------------------- LAST
+
+echo "Setting up dotfiles..."
+
+if [ ! -d ~/dotfiles ]; then
+  git clone -b dotf https://github.com/jakubholynet/dotfiles.git ~/dotfiles
+  ( cd ~/dotfiles; git remote set-url origin git@github.com:jakubholynet/dotfiles.git )
+  ~/dotfiles/symlink.sh
+fi
+
 ## TODO: Update path in .profile
 # $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # Add rbenv to bash, zsh, fish: https://coderwall.com/p/6bqzvq/sudoless-brewed-rubygems-on-os-x
 # export NVM_DIR=~/.nvm
 #    source $(brew --prefix nvm)/nvm.sh
 
+#--------------------------------- TODOs
+
 ## TODO Install
 # Junos, Sophos
 ## TODO Config OSX, apps
+# TODO tunnelblick must be directly in /Applications => mv mv /opt/homebrew-cask/Caskroom/tunnelblick/3.5.0_build_4265/Tunnelblick.app there
