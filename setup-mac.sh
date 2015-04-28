@@ -41,6 +41,9 @@ binaries=(
  fish
  wget
  jq
+ ansible
+ docker
+ boot2docker
 )
 
 echo "installing binaries..."
