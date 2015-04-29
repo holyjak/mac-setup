@@ -2,6 +2,8 @@
 set -e
 set -u
 
+echo ">> Starting setup..."
+
 # Here we go.. ask for the administrator password upfront and run a
 # keep-alive to update existing `sudo` time stamp until script has finished
 # Credits: https://gist.github.com/brandonb927/3195465
@@ -33,7 +35,7 @@ brew install findutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-#---------------------------------
+#--------------------------------- BREW
 binaries=(
  git
  nvm
@@ -44,14 +46,15 @@ binaries=(
  ansible
  docker
  boot2docker
+ python # updated, with pip
 )
 
-echo "installing binaries..."
+echo ">> Installing binaries..."
 brew install ${binaries[@]}
 
 brew cleanup
 
-#---------------------------------
+#--------------------------------- CASK
 
 brew install caskroom/cask/brew-cask
 
@@ -78,13 +81,13 @@ apps=(
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
-echo "installing apps..."
+echo ">> Installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 # For alternative versions: brew tap caskroom/versions
 
-#---------------------------------
-echo "Installing Node.js ... "
+#--------------------------------- NODE
+echo ">> Installing Node.js ... "
 export NVM_DIR=~/.nvm
 # Add a link to fix nvm.fish:
 ln -fs $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
@@ -98,9 +101,9 @@ nvm install v0.10
 nvm alias default v0.10
 npm install -g jshint
 
-#---------------------------------
+#--------------------------------- RUBY
 
-echo "Settin up ruby env (rbenv)"
+echo ">> Settin up ruby env (rbenv)"
 # GEMs, linter-puppet-lint prereq
 brew install rbenv ruby-build
 if [ ! -f ~/.gemrc ]; then
@@ -112,8 +115,11 @@ if [ ! -f ~/.gemrc ]; then
   gem install puppet-lint
 fi
 
-#---------------------------------
-echo "Installing Atom plugins..."
+#--------------------------------- PYTHON
+pip install boto
+
+#--------------------------------- ATOM
+echo ">> Installing Atom plugins..."
 
 atom_plugins=(
   linter
@@ -154,7 +160,7 @@ fi
 
 #--------------------------------- LAST
 
-echo "Setting up dotfiles..."
+echo ">> Setting up dotfiles..."
 
 if [ ! -d ~/dotfiles ]; then
   git clone -b dotf https://github.com/jakubholynet/dotfiles.git ~/dotfiles
@@ -174,3 +180,5 @@ fi
 # Junos, Sophos
 ## TODO Config OSX, apps
 # TODO tunnelblick must be directly in /Applications => mv mv /opt/homebrew-cask/Caskroom/tunnelblick/3.5.0_build_4265/Tunnelblick.app there
+
+echo ">> DONE SETTING UP. HAVE FUN!"
