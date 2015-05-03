@@ -136,6 +136,7 @@ atom_plugins=(
   editorconfig
   language-puppet
   linter-puppet-lint
+  language-docker
 )
 
 apm install ${atom_plugins[@]}
