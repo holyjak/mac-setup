@@ -18,6 +18,7 @@ if test ! $(which brew); then
 fi
 
 # Update homebrew recipes
+echo ">> Brew update..."
 brew update
 
 #---------------------------------
@@ -137,6 +138,7 @@ atom_plugins=(
   language-puppet
   linter-puppet-lint
   language-docker
+  sublime-style-column-selection
 )
 
 apm install ${atom_plugins[@]}
