@@ -139,6 +139,8 @@ atom_plugins=(
   linter-puppet-lint
   language-docker
   sublime-style-column-selection
+  incremental-search
+  #dash
 )
 
 apm install ${atom_plugins[@]}
