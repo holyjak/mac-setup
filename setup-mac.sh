@@ -48,9 +48,12 @@ binaries=(
  docker
  boot2docker
  python # updated, with pip
+ ack # Jakob's deploy checklist 
 )
 
 echo ">> Installing binaries..."
+## TODO brew upgrade --all # To stop failing when trying to install an already installed but older version
+## TODO brew cleanup
 brew install ${binaries[@]}
 
 brew cleanup
@@ -78,6 +81,7 @@ apps=(
   tunnelblick
   p4merge
   spideroak
+  libreoffice
 )
 
 # Install apps to /Applications
@@ -130,10 +134,10 @@ atom_plugins=(
   lodash-snippets
   javascript-snippets
   script
-#  refactor  js-refactor # BROKEN AS OF 2015-04-17
+  # refactor  js-refactor # BROKEN AS OF 2015-04-17 # refactor is not available anymore?!
   npm-autocomplete
-  autocomplete-snippets
-  test-status
+  # autocomplete-snippets # bundled with Atom
+  #test-status
   editorconfig
   language-puppet
   linter-puppet-lint
@@ -141,6 +145,8 @@ atom_plugins=(
   sublime-style-column-selection
   incremental-search
   #dash
+  paredit
+  # TODO: hydrogen # - LT-like live eval of any code in Atom
 )
 
 apm install ${atom_plugins[@]}
