@@ -48,7 +48,8 @@ binaries=(
  docker
  boot2docker
  python # updated, with pip
- ack # Jakob's deploy checklist 
+ ack # Jakob's deploy checklist
+ zeromq # Atom Hydrogen dependency
 )
 
 echo ">> Installing binaries..."
@@ -91,7 +92,7 @@ brew cask install --appdir="/Applications" ${apps[@]}
 
 # For alternative versions: brew tap caskroom/versions
 
-#--------------------------------- NODE
+#--------------------------------- NODE ITSELF
 echo ">> Installing Node.js ... "
 export NVM_DIR=~/.nvm
 # Add a link to fix nvm.fish:
@@ -104,7 +105,6 @@ set -e
 
 nvm install v0.10
 nvm alias default v0.10
-npm install -g jshint
 
 #--------------------------------- RUBY
 
@@ -121,7 +121,19 @@ if [ ! -f ~/.gemrc ]; then
 fi
 
 #--------------------------------- PYTHON
-pip install boto
+python_packages=(
+  boto
+ "ipython[notebook]"   # Atom Hydrogen dependency
+ jinja2 tornado jsonschema pyzmq # IJavascript -> Atom Hydrogen dependency
+)
+pip install ${python_packages[@]}
+
+# --------------------------------- NODE PACKAGES
+npm_packages=(
+  jshint
+  ijavascript # Atom Hydrogen dependency
+)
+npm install -g ${npm_packages[@]}
 
 #--------------------------------- ATOM
 echo ">> Installing Atom plugins..."
@@ -135,7 +147,7 @@ atom_plugins=(
   javascript-snippets
   script
   # refactor  js-refactor # BROKEN AS OF 2015-04-17 # refactor is not available anymore?!
-  npm-autocomplete
+  #npm-autocomplete # Not yet compatible with Atom 1.0 API
   # autocomplete-snippets # bundled with Atom
   #test-status
   editorconfig
@@ -145,16 +157,17 @@ atom_plugins=(
   sublime-style-column-selection
   incremental-search
   #dash
-  paredit
-  # TODO: hydrogen # - LT-like live eval of any code in Atom
+  #paredit
+  hydrogen
+  # iojs-debugger
 )
 
 apm install ${atom_plugins[@]}
 #---------------------------------
 
-if which java > /dev/null; then 
+if which java > /dev/null; then
   brew install leiningen
-  lein --version &> /dev/null # download Clojure if needed 
+  lein --version &> /dev/null # download Clojure if needed
 else
   echo "WARN: Not installing Leiningen - no java found"
 fi
