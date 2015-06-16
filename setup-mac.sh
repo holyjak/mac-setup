@@ -83,6 +83,7 @@ apps=(
   p4merge
   spideroak
   libreoffice
+  skitch
 )
 
 # Install apps to /Applications
@@ -121,6 +122,7 @@ if [ ! -f ~/.gemrc ]; then
 fi
 
 #--------------------------------- PYTHON
+echo ">> Installing python packages..."
 python_packages=(
   boto
  "ipython[notebook]"   # Atom Hydrogen dependency
@@ -129,6 +131,7 @@ python_packages=(
 pip install ${python_packages[@]}
 
 # --------------------------------- NODE PACKAGES
+echo ">> Installing npm packages..."
 npm_packages=(
   jshint
   ijavascript # Atom Hydrogen dependency
