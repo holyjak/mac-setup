@@ -84,6 +84,7 @@ apps=(
   spideroak
   libreoffice
   skitch
+  handbrake
 )
 
 # Install apps to /Applications
