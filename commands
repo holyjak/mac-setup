@@ -1,0 +1,1 @@
+/usr/libexec/PlistBuddy -c "Print" ~/Library/Preferences/com.googlecode.iterm2.plist
