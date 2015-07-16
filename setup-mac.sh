@@ -137,6 +137,7 @@ echo ">> Installing npm packages..."
 npm_packages=(
   jshint
   ijavascript # Atom Hydrogen dependency
+  node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
 )
 npm install -g ${npm_packages[@]}
 
@@ -166,6 +167,7 @@ atom_plugins=(
   hydrogen
   # iojs-debugger
   nuclide-installer
+  symbol-gen # => generate ctags file & jump to a definition
 )
 
 apm install ${atom_plugins[@]}

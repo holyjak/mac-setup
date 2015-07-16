@@ -15,3 +15,7 @@ echo ""
 echo "DONE"
 echo ""
 echo "Beware: Some of these might require restart / re-login"
+
+
+## TODO Try
+# networksetup -setcomputername <name>
