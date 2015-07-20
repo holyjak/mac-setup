@@ -86,6 +86,7 @@ apps=(
   libreoffice
   skitch
   handbrake
+  chefdk # chef development kit: chef + other tools
 )
 
 # Install apps to /Applications
