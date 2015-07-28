@@ -175,9 +175,9 @@ atom_plugins=(
 apm install ${atom_plugins[@]}
 #---------------------------------
 
-if which java > /dev/null; then
+if which java > /dev/null && java -version ; then
   brew install leiningen
-  lein --version &> /dev/null # download Clojure if needed
+  lein --version &> /dev/null # downloads Clojure if needed
 else
   echo "WARN: Not installing Leiningen - no java found"
 fi
@@ -211,7 +211,7 @@ fi
 #--------------------------------- TODOs
 
 ## TODO Install
-# Junos, Sophos
+# Junos, Avira, ? JDK
 ## TODO Config OSX, apps
 # TODO tunnelblick must be directly in /Applications => mv mv /opt/homebrew-cask/Caskroom/tunnelblick/3.5.0_build_4265/Tunnelblick.app there
 
