@@ -143,6 +143,16 @@ npm_packages=(
 )
 npm install -g ${npm_packages[@]}
 
+#--------------------------------- VAGRANT
+echo ">> Installing Vagrant plugins..."
+vagrant_plugins=(
+  vagrant-vbguest
+  vagrant-proxyconf
+  vagrant-hostmanager
+)
+
+vagrant plugin install ${vagrant_plugins[@]}
+
 #--------------------------------- ATOM
 echo ">> Installing Atom plugins..."
 
