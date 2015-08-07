@@ -52,6 +52,7 @@ binaries=(
  zeromq # Atom Hydrogen dependency
  # ngrok # expose a local server behind a NAT or firewall to the internet
  rsync # 3.1 - while Yosemite still has 2.6
+ planck # ClojureScript REPL
 )
 
 echo ">> Installing binaries..."
