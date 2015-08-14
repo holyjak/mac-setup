@@ -1,6 +1,6 @@
 #!/usr/bin/env bash --norc
-set -e
-set -u
+set -o nounset # fail on unset variables
+set -o errexit # fail if any statement doesn't return 0
 
 echo ">> Starting setup..."
 
@@ -103,14 +103,16 @@ echo ">> Installing Node.js ... "
 export NVM_DIR=~/.nvm
 # Add a link to fix nvm.fish:
 ln -fs $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
-set +u
-set +e
+set +o nounset
+set +o errexit
 source $(brew --prefix nvm)/nvm.sh
-set -u
-set -e
 
 nvm install v0.10
+nvm install iojs
 nvm alias default v0.10
+
+set -o nounset
+set -o errexit
 
 #--------------------------------- RUBY
 
@@ -142,7 +144,22 @@ npm_packages=(
   ijavascript # Atom Hydrogen dependency
   node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
 )
+iojs_packages=(
+  jshint
+  # ijavascript # Atom Hydrogen dependency; not supported on iojs as yet
+  # node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome) # Not supported yet
+)
+
+set +o nounset
+set +o errexit
+
+nvm use v0.10
 npm install -g ${npm_packages[@]}
+nvm use iojs
+npm install -g ${iojs_packages[@]}
+
+set -o nounset
+set -o errexit
 
 #--------------------------------- VAGRANT
 echo ">> Installing Vagrant plugins..."
