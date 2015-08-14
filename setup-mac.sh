@@ -20,6 +20,8 @@ fi
 # Update homebrew recipes
 echo ">> Brew update..."
 brew update
+echo ">> Upgrading installed packages" # To prevent failures of install where already installed in an older version
+brew upgrade
 
 #---------------------------------
 
