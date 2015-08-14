@@ -91,6 +91,7 @@ apps=(
   skitch
   handbrake
   chefdk # chef development kit: chef + other tools
+  intellij-idea-ce
 )
 
 # Install apps to /Applications
