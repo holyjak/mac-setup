@@ -55,6 +55,7 @@ binaries=(
  # ngrok # expose a local server behind a NAT or firewall to the internet
  rsync # 3.1 - while Yosemite still has 2.6
  planck # ClojureScript REPL
+ youtube-dl # youtube downloader https://rg3.github.io/youtube-dl/
 )
 
 echo ">> Installing binaries..."
