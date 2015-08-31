@@ -34,6 +34,9 @@ brew install findutils
 # Install Bash 4
 #brew install bash
 
+# Add non-standard versions
+brew tap caskroom/versions
+
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
@@ -77,7 +80,6 @@ apps=(
   slack
   firefox
   vagrant
-  iterm2
   #sublime-text3
   virtualbox
   atom
@@ -93,6 +95,7 @@ apps=(
   handbrake
   chefdk # chef development kit: chef + other tools
   intellij-idea-ce
+  iterm2-beta #iterm2
 )
 
 # Install apps to /Applications
