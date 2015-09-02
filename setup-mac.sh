@@ -114,9 +114,9 @@ set +o nounset
 set +o errexit
 source $(brew --prefix nvm)/nvm.sh
 
-nvm install v0.10
+nvm install v0.12
 nvm install iojs
-nvm alias default v0.10
+nvm alias default v0.12
 
 set -o nounset
 set -o errexit
