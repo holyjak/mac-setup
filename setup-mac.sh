@@ -160,7 +160,7 @@ iojs_packages=(
 set +o nounset
 set +o errexit
 
-nvm use v0.10
+nvm use default
 npm install -g ${npm_packages[@]}
 nvm use iojs
 npm install -g ${iojs_packages[@]}
