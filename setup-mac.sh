@@ -199,12 +199,20 @@ atom_plugins=(
   language-docker
   sublime-style-column-selection
   incremental-search
-  #dash
+  dash # Search for word at cursor with ctrl-h (ctx-sensitive, see the plugin config)
   #paredit
   hydrogen
   # iojs-debugger
   nuclide-installer
   symbol-gen # => generate ctags file & jump to a definition
+  synced-sidebar # scroll to the open file in the tree view
+  imdone-atom # trello-like dashboard for tasks in the code and a todo file
+  clipboard-plus # remember past clipboard entries
+  pigments # display colors in CSS/...
+  autocomplete-paths # E.g. in require("..") 
+  highlight-selected # 2-click a word to highlight its occurences in the file
+  docblockr # doc writing support: on Enter, insert * + keep indent., ...
+  # Consider: quick-editor # edit css/less/sass directly from the HTML using it
 )
 
 apm install ${atom_plugins[@]}
