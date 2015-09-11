@@ -59,6 +59,7 @@ binaries=(
  rsync # 3.1 - while Yosemite still has 2.6
  planck # ClojureScript REPL
  youtube-dl # youtube downloader https://rg3.github.io/youtube-dl/
+ # brew tap nlf/dhyve; brew install --HEAD dhyve # boot2docker inside a lightweight container instead of VB
 )
 
 echo ">> Installing binaries..."
