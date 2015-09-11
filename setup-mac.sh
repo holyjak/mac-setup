@@ -139,6 +139,7 @@ fi
 echo ">> Installing python packages..."
 python_packages=(
   boto
+  boto3
  "ipython[notebook]"   # Atom Hydrogen dependency
  jinja2 tornado jsonschema pyzmq # IJavascript -> Atom Hydrogen dependency
 )
@@ -150,6 +151,7 @@ npm_packages=(
   jshint
   ijavascript # Atom Hydrogen dependency
   node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
+  linux # run Linux on Yosemite easily from the CLI via the xyhve supervisor - https://github.com/maxogden/linux
 )
 iojs_packages=(
   jshint
