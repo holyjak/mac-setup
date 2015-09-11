@@ -208,13 +208,15 @@ atom_plugins=(
   # iojs-debugger
   nuclide-installer
   symbol-gen # => generate ctags file & jump to a definition
-  synced-sidebar # scroll to the open file in the tree view
+  # synced-sidebar # scroll to the open file in the tree view # Does not work with Nuclide File Tree as of 0.4.0
   imdone-atom # trello-like dashboard for tasks in the code and a todo file
   clipboard-plus # remember past clipboard entries
   pigments # display colors in CSS/...
   autocomplete-paths # E.g. in require("..") 
   highlight-selected # 2-click a word to highlight its occurences in the file
   docblockr # doc writing support: on Enter, insert * + keep indent., ...
+  trailing-spaces # highlight them
+  atom-ternjs # smarter autocomplete using the Tern code analyzer
   # Consider: quick-editor # edit css/less/sass directly from the HTML using it
 )
 
