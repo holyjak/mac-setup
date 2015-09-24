@@ -59,7 +59,7 @@ binaries=(
  python # updated, with pip
  ack # Jakob's deploy checklist
  zeromq # Atom Hydrogen dependency
- ngrok # expose a local server behind a NAT or firewall to the internet
+ # ngrok v2 is closed source, install manually; # expose a local server behind a NAT or firewall to the internet
  rsync # 3.1 - while Yosemite still has 2.6
  planck # ClojureScript REPL
  youtube-dl # youtube downloader https://rg3.github.io/youtube-dl/
