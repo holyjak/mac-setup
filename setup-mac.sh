@@ -41,6 +41,10 @@ brew tap caskroom/versions
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
+# Extra taps
+brew tap shopify/shopify
+brew tap nlf/dhyve
+
 #--------------------------------- BREW
 binaries=(
  git
@@ -55,10 +59,11 @@ binaries=(
  python # updated, with pip
  ack # Jakob's deploy checklist
  zeromq # Atom Hydrogen dependency
- # ngrok # expose a local server behind a NAT or firewall to the internet
+ ngrok # expose a local server behind a NAT or firewall to the internet
  rsync # 3.1 - while Yosemite still has 2.6
  planck # ClojureScript REPL
  youtube-dl # youtube downloader https://rg3.github.io/youtube-dl/
+ toxiproxy # Tap shopify
  # brew tap nlf/dhyve; brew install --HEAD dhyve # boot2docker inside a lightweight container instead of VB
 )
 
@@ -217,7 +222,11 @@ atom_plugins=(
   docblockr # doc writing support: on Enter, insert * + keep indent., ...
   trailing-spaces # highlight them
   atom-ternjs # smarter autocomplete using the Tern code analyzer
+  # NEWISH:
+  jumpy # ~ ace-jump; shift-enter
+  scratch # Open scratch file with C-A-, -> .atom/scratch
   # Consider: quick-editor # edit css/less/sass directly from the HTML using it
+  # Interesting: tasks; 
 )
 
 apm install ${atom_plugins[@]}
