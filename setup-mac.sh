@@ -148,6 +148,7 @@ python_packages=(
   boto3
  "ipython[notebook]"   # Atom Hydrogen dependency
  jinja2 tornado jsonschema pyzmq # IJavascript -> Atom Hydrogen dependency
+ virtualfish # Fish wrapper around virtualenv, see http://virtualfish.readthedocs.org/en/latest/install.html
 )
 pip install ${python_packages[@]}
 
