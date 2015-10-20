@@ -55,6 +55,7 @@ binaries=(
  jq
  ansible
  docker
+ docker-machine
  boot2docker
  python # updated, with pip
  ack # Jakob's deploy checklist
