@@ -214,7 +214,7 @@ atom_plugins=(
   #paredit
   hydrogen
   # iojs-debugger
-  nuclide-installer
+  #nuclide-installer # Until https://github.com/atom/atom/issues/3426#issuecomment-145201151 fixed
   symbol-gen # => generate ctags file & jump to a definition
   # synced-sidebar # scroll to the open file in the tree view # Does not work with Nuclide File Tree as of 0.4.0
   imdone-atom # trello-like dashboard for tasks in the code and a todo file
