@@ -56,7 +56,7 @@ binaries=(
  ansible
  docker
  docker-machine
- boot2docker
+ docker-compose
  python # updated, with pip
  ack # Jakob's deploy checklist
  zeromq # Atom Hydrogen dependency
