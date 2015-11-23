@@ -66,7 +66,9 @@ binaries=(
  youtube-dl # youtube downloader https://rg3.github.io/youtube-dl/
  toxiproxy # Tap shopify
  # brew tap nlf/dhyve; brew install --HEAD dhyve # boot2docker inside a lightweight container instead of VB
+ # Project support:
  maven
+ gradle
 )
 
 echo ">> Installing binaries..."
