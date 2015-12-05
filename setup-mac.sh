@@ -162,6 +162,7 @@ npm_packages=(
   ijavascript # Atom Hydrogen dependency
   node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
   linux # run Linux on Yosemite easily from the CLI via the xyhve supervisor - https://github.com/maxogden/linux
+  gulp
 )
 iojs_packages=(
   jshint
