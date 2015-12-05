@@ -124,9 +124,8 @@ set +o nounset
 set +o errexit
 source $(brew --prefix nvm)/nvm.sh
 
-nvm install v0.12
-nvm install iojs
-nvm alias default v0.12
+nvm install v4.2.1
+nvm alias default v4.2.1
 
 set -o nounset
 set -o errexit
@@ -175,8 +174,6 @@ set +o errexit
 
 nvm use default
 npm install -g ${npm_packages[@]}
-nvm use iojs
-npm install -g ${iojs_packages[@]}
 
 set -o nounset
 set -o errexit
@@ -197,7 +194,8 @@ echo ">> Installing Atom plugins..."
 atom_plugins=(
   linter
   #jshint
-  linter-jshint # Requires 'npm install -g jshint' ?
+  #linter-jshint # Requires 'npm install -g jshint' ?
+  linter-eslint
   react
   lodash-snippets
   javascript-snippets
