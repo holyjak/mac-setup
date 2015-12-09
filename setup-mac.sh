@@ -142,6 +142,7 @@ if [ ! -f ~/.gemrc ]; then
   export GEM_PATH="$(brew --prefix)/opt/gems"
   echo "gem: -n/usr/local/bin" > ~/.gemrc
   gem install puppet-lint
+  gem install github-pages
 fi
 
 #--------------------------------- PYTHON
@@ -231,6 +232,7 @@ atom_plugins=(
   scratch # Open scratch file with C-A-, -> .atom/scratch
   # Consider: quick-editor # edit css/less/sass directly from the HTML using it
   # Interesting: tasks; 
+  git-blame
 )
 
 apm install ${atom_plugins[@]}
