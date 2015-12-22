@@ -85,6 +85,9 @@ brew install caskroom/cask/brew-cask
 # Apps
 apps=(
   alfred
+  audacity
+  #soundflower # Uncomment after moving to El Captain
+
   dropbox
   google-chrome
   slack
