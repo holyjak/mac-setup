@@ -69,6 +69,8 @@ binaries=(
  # Project support:
  maven
  gradle
+ 
+ lame # for Audacity MP3 export
 )
 
 echo ">> Installing binaries..."
