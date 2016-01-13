@@ -169,6 +169,8 @@ npm_packages=(
   node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
   linux # run Linux on Yosemite easily from the CLI via the xyhve supervisor - https://github.com/maxogden/linux
   gulp
+  grunt-cli # Requires to run `npm i` in the project first
+  nodemon   # Monitor a dir for changes (with filters), exec a command
 )
 iojs_packages=(
   jshint
