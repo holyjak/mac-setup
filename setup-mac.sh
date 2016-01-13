@@ -202,8 +202,6 @@ echo ">> Installing Atom plugins..."
 
 atom_plugins=(
   linter
-  #jshint
-  #linter-jshint # Requires 'npm install -g jshint' ?
   linter-eslint
   react
   lodash-snippets
@@ -240,6 +238,7 @@ atom_plugins=(
   # Consider: quick-editor # edit css/less/sass directly from the HTML using it
   # Interesting: tasks; 
   git-blame
+  js-hyperclick # alt-click navigation for JS via Facebook hyperclick
 )
 
 apm install ${atom_plugins[@]}
