@@ -71,6 +71,7 @@ binaries=(
  gradle
  
  lame # for Audacity MP3 export
+ imagemagick # => convert -auto-orient *.jpg out.pdf
 )
 
 echo ">> Installing binaries..."
@@ -110,7 +111,7 @@ apps=(
   handbrake
   chefdk # chef development kit: chef + other tools
   intellij-idea-ce
-  iterm2-beta #iterm2
+  iterm2 #iterm2-beta 
 )
 
 # Install apps to /Applications
@@ -239,6 +240,9 @@ atom_plugins=(
   # Interesting: tasks; 
   git-blame
   js-hyperclick # alt-click navigation for JS via Facebook hyperclick
+  split-diff
+  atom-beautify
+  cursor-history # or last-cursor-position ?
 )
 
 apm install ${atom_plugins[@]}
