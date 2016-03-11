@@ -96,7 +96,7 @@ apps=(
   firefox
   vagrant
   #sublime-text3
-  virtualbox
+  #virtualbox
   atom
   vlc
   skype
