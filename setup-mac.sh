@@ -243,6 +243,8 @@ atom_plugins=(
   split-diff
   atom-beautify
   cursor-history # or last-cursor-position ?
+  react-es6-snippets # TODO eval
+  
 )
 
 apm install ${atom_plugins[@]}
