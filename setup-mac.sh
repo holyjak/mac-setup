@@ -73,6 +73,7 @@ binaries=(
  lame # for Audacity MP3 export
  imagemagick # => convert -auto-orient *.jpg out.pdf
  terraform # HashiCorp infrastructure as a code provisioning
+ kubernetes-cli # docker cluster
 )
 
 echo ">> Installing binaries..."
