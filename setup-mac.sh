@@ -85,8 +85,6 @@ brew cleanup
 
 #--------------------------------- CASK
 
-brew install caskroom/cask/brew-cask
-
 # Apps
 apps=(
   alfred
@@ -114,6 +112,8 @@ apps=(
   chefdk # chef development kit: chef + other tools
   intellij-idea-ce
   iterm2 #iterm2-beta 
+  #gitup # better GitX, Git GUI
+  transmission
 )
 
 # Install apps to /Applications
@@ -174,6 +174,7 @@ npm_packages=(
   gulp
   grunt-cli # Requires to run `npm i` in the project first
   nodemon   # Monitor a dir for changes (with filters), exec a command
+  mancy     # Awesome Electron-based Node REPL UI
 )
 iojs_packages=(
   jshint
