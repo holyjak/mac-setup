@@ -114,6 +114,7 @@ apps=(
   iterm2 #iterm2-beta 
   #gitup # better GitX, Git GUI
   transmission
+  lighttable
 )
 
 # Install apps to /Applications
