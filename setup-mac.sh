@@ -74,6 +74,7 @@ binaries=(
  imagemagick # => convert -auto-orient *.jpg out.pdf
  terraform # HashiCorp infrastructure as a code provisioning
  kubernetes-cli # docker cluster
+ # "wireshark --with-qt" # Qt needed to get the GUI
 )
 
 echo ">> Installing binaries..."
