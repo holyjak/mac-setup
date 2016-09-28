@@ -76,6 +76,7 @@ binaries=(
  kubernetes-cli # docker cluster
  # "wireshark --with-qt" # Qt needed to get the GUI # TODO If your list of available capture interfaces is empty (default OS X behavior), try installing ChmodBPF from homebrew cask: brew cask install wireshark-chmodbpf
  rlwrap
+ corkscrew # ssh tunneling
 )
 
 echo ">> Installing binaries..."
@@ -111,7 +112,7 @@ apps=(
   libreoffice
   skitch
   handbrake
-  chefdk # chef development kit: chef + other tools
+  #chefdk # chef development kit: chef + other tools
   intellij-idea-ce
   iterm2 #iterm2-beta 
   #gitup # better GitX, Git GUI
