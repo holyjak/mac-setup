@@ -123,6 +123,7 @@ apps=(
   lighttable
   qlmarkdown # Markdown support for OSX Quikc Look previews
   # reactotron # UI for inspecting React JS/Native apps
+  spectacle # Resize, move windows via keyboard shortcut; Donate!
 )
 
 # Install apps to /Applications
