@@ -141,8 +141,8 @@ set +o nounset
 set +o errexit
 source $(brew --prefix nvm)/nvm.sh
 
-nvm install v4.4.3
-nvm alias default v4.4.3
+nvm install v6.9.1
+nvm alias default v6.9.1
 
 set -o nounset
 set -o errexit
