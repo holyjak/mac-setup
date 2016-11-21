@@ -77,6 +77,9 @@ binaries=(
  # "wireshark --with-qt" # Qt needed to get the GUI # TODO If your list of available capture interfaces is empty (default OS X behavior), try installing ChmodBPF from homebrew cask: brew cask install wireshark-chmodbpf
  rlwrap
  corkscrew # ssh tunneling
+
+ gnupg2 # PGP via GnuPG
+ keybase
 )
 
 echo ">> Installing binaries..."
@@ -118,6 +121,8 @@ apps=(
   #gitup # better GitX, Git GUI
   transmission
   lighttable
+  qlmarkdown # Markdown support for OSX Quikc Look previews
+  # reactotron # UI for inspecting React JS/Native apps
 )
 
 # Install apps to /Applications
@@ -136,8 +141,8 @@ set +o nounset
 set +o errexit
 source $(brew --prefix nvm)/nvm.sh
 
-nvm install v4.2.1
-nvm alias default v4.2.1
+nvm install v4.4.3
+nvm alias default v4.4.3
 
 set -o nounset
 set -o errexit
