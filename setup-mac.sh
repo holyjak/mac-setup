@@ -185,6 +185,7 @@ npm_packages=(
   grunt-cli # Requires to run `npm i` in the project first
   nodemon   # Monitor a dir for changes (with filters), exec a command
   mancy     # Awesome Electron-based Node REPL UI
+  nesh nesh-lodash2 nesh-history-search nesh-co
 )
 iojs_packages=(
   jshint
