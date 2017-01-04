@@ -161,6 +161,7 @@ if [ ! -f ~/.gemrc ]; then
   echo "gem: -n/usr/local/bin" > ~/.gemrc
   gem install puppet-lint
   gem install github-pages
+  gem install bundler
 fi
 
 #--------------------------------- PYTHON
