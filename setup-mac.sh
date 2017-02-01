@@ -54,9 +54,9 @@ binaries=(
  wget
  jq
  ansible
- docker
- docker-machine
- docker-compose
+ #docker
+ #docker-machine
+ #docker-compose
  python # updated, with pip
  ack # Jakob's deploy checklist
  zeromq # Atom Hydrogen dependency
@@ -124,6 +124,7 @@ apps=(
   qlmarkdown # Markdown support for OSX Quikc Look previews
   # reactotron # UI for inspecting React JS/Native apps
   spectacle # Resize, move windows via keyboard shortcut; Donate!
+  docker # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
 )
 
 # Install apps to /Applications
