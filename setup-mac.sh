@@ -115,7 +115,7 @@ apps=(
   skitch
   handbrake
   #chefdk # chef development kit: chef + other tools
-  intellij-idea-ce
+  jetbrains-toolbox
   iterm2 #iterm2-beta 
   #gitup # better GitX, Git GUI
   transmission
