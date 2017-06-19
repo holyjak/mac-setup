@@ -260,7 +260,7 @@ atom_plugins=(
   atom-beautify
   cursor-history # or last-cursor-position ?
   react-es6-snippets # TODO eval
-  
+  default-language # to set Markdown as default for new files
 )
 
 apm install ${atom_plugins[@]}
