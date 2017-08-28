@@ -58,6 +58,7 @@ binaries=(
  #docker-machine
  #docker-compose
  python # updated, with pip
+ ruby # updated
  ack # Jakob's deploy checklist
  zeromq # Atom Hydrogen dependency
  # ngrok v2 is closed source, install manually; # expose a local server behind a NAT or firewall to the internet
@@ -155,14 +156,14 @@ echo ">> Settin up ruby env (rbenv)"
 # GEMs, linter-puppet-lint prereq
 brew install rbenv ruby-build
 if [ ! -f ~/.gemrc ]; then
-  sudo gem update --system
+  sudo gem update -n /usr/local/bin --system
   export RBENV_ROOT="$(brew --prefix rbenv)"
   export GEM_HOME="$(brew --prefix)/opt/gems"
   export GEM_PATH="$(brew --prefix)/opt/gems"
   echo "gem: -n/usr/local/bin" > ~/.gemrc
-  gem install puppet-lint
-  gem install github-pages
-  gem install bundler
+  gem install -n /usr/local/bin puppet-lint
+  gem install -n /usr/local/bin github-pages
+  gem install -n /usr/local/bin bundler
 fi
 
 #--------------------------------- PYTHON
