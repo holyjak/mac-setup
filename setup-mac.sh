@@ -174,7 +174,7 @@ python_packages=(
  jinja2 tornado jsonschema pyzmq # IJavascript -> Atom Hydrogen dependency
  virtualfish # Fish wrapper around virtualenv, see http://virtualfish.readthedocs.org/en/latest/install.html
 )
-pip install ${python_packages[@]}
+pip2 install ${python_packages[@]}
 
 # --------------------------------- NODE PACKAGES
 echo ">> Installing npm packages..."
