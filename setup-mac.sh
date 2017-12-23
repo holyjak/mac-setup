@@ -75,6 +75,7 @@ binaries=(
  imagemagick # => convert -auto-orient *.jpg out.pdf
  terraform # HashiCorp infrastructure as a code provisioning
  terragrunt # terraform wrapper
+ packer # create AMIs etc
  kubernetes-cli # docker cluster
  # "wireshark --with-qt" # Qt needed to get the GUI # TODO If your list of available capture interfaces is empty (default OS X behavior), try installing ChmodBPF from homebrew cask: brew cask install wireshark-chmodbpf
  rlwrap
