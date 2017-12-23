@@ -74,6 +74,7 @@ binaries=(
  lame # for Audacity MP3 export
  imagemagick # => convert -auto-orient *.jpg out.pdf
  terraform # HashiCorp infrastructure as a code provisioning
+ terragrunt # terraform wrapper
  kubernetes-cli # docker cluster
  # "wireshark --with-qt" # Qt needed to get the GUI # TODO If your list of available capture interfaces is empty (default OS X behavior), try installing ChmodBPF from homebrew cask: brew cask install wireshark-chmodbpf
  rlwrap
@@ -145,6 +146,7 @@ set +o errexit
 source $(brew --prefix nvm)/nvm.sh
 
 nvm install v6.10.0
+nvm install v8.1.4
 nvm alias default v6.10.0
 
 set -o nounset
