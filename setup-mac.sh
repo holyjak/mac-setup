@@ -82,6 +82,8 @@ binaries=(
  corkscrew # ssh tunneling
 
  gnupg2 # PGP via GnuPG
+ pre-commit # see http://pre-commit.com/ - used by some projects
+ ffmpeg # ffprobe for extracting audio from video with youtube-dl
 )
 
 echo ">> Installing binaries..."
