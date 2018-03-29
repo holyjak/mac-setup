@@ -84,6 +84,7 @@ binaries=(
  gnupg2 # PGP via GnuPG
  pre-commit # see http://pre-commit.com/ - used by some projects
  ffmpeg # ffprobe for extracting audio from video with youtube-dl
+ s-nail # CLI for sending emails (with custom From, remote SMTP server)
 )
 
 echo ">> Installing binaries..."
