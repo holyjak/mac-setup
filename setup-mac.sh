@@ -85,6 +85,7 @@ binaries=(
  pre-commit # see http://pre-commit.com/ - used by some projects
  ffmpeg # ffprobe for extracting audio from video with youtube-dl
  s-nail # CLI for sending emails (with custom From, remote SMTP server)
+ adr-tools # simple tool for managing Architecture Decision Records (.md files) for a project
 )
 
 echo ">> Installing binaries..."
@@ -195,6 +196,7 @@ npm_packages=(
   nodemon   # Monitor a dir for changes (with filters), exec a command
   mancy     # Awesome Electron-based Node REPL UI
   nesh nesh-lodash2 nesh-history-search nesh-co
+  graphqurl # gq, CLI with autocomplete for talking to GraphQL servers
 )
 iojs_packages=(
   jshint
