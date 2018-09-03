@@ -152,7 +152,8 @@ source $(brew --prefix nvm)/nvm.sh
 
 nvm install v6.10.0
 nvm install v8.1.4
-nvm alias default v6.10.0
+nvm install v10
+nvm alias default v10
 
 set -o nounset
 set -o errexit
