@@ -86,6 +86,14 @@ binaries=(
  ffmpeg # ffprobe for extracting audio from video with youtube-dl
  s-nail # CLI for sending emails (with custom From, remote SMTP server)
  adr-tools # simple tool for managing Architecture Decision Records (.md files) for a project
+ direnv    # so I can have dir-specific env vars .envrc in fish/bash/...
+ ranger # cmd-line file manager; optional dependencies follow:
+ # ranger deps:
+   highlight 
+   atool 
+   media-info 
+   w3m 
+
 )
 
 echo ">> Installing binaries..."
