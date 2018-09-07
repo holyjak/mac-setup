@@ -10,6 +10,7 @@ echo ">> Starting setup..."
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+#--------------------------------- BREW
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
@@ -23,131 +24,10 @@ brew update
 echo ">> Upgrading installed packages" # To prevent failures of install where already installed in an older version
 brew upgrade
 
-#---------------------------------
-
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-#brew install bash
-
-# Add non-standard versions
-brew tap caskroom/versions
-
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
-
-# Extra taps
-brew tap shopify/shopify
-brew tap nlf/dhyve
-
-#--------------------------------- BREW
-binaries=(
- git
- nvm
- editorconfig
- fish
- wget
- jq
- ansible
- #docker
- #docker-machine
- #docker-compose
- python # updated, with pip
- ruby # updated
- ack # Jakob's deploy checklist
- zeromq # Atom Hydrogen dependency
- # ngrok v2 is closed source, install manually; # expose a local server behind a NAT or firewall to the internet
- rsync # 3.1 - while Yosemite still has 2.6
- planck # ClojureScript REPL
- youtube-dl # youtube downloader https://rg3.github.io/youtube-dl/
- toxiproxy # Tap shopify
- # brew tap nlf/dhyve; brew install --HEAD dhyve # boot2docker inside a lightweight container instead of VB
- # Project support:
- maven
- gradle
- 
- lame # for Audacity MP3 export
- imagemagick # => convert -auto-orient *.jpg out.pdf
- terraform # HashiCorp infrastructure as a code provisioning
- terragrunt # terraform wrapper
- packer # create AMIs etc
- kubernetes-cli # docker cluster
- # "wireshark --with-qt" # Qt needed to get the GUI # TODO If your list of available capture interfaces is empty (default OS X behavior), try installing ChmodBPF from homebrew cask: brew cask install wireshark-chmodbpf
- rlwrap
- corkscrew # ssh tunneling
-
- gnupg2 # PGP via GnuPG
- pre-commit # see http://pre-commit.com/ - used by some projects
- ffmpeg # ffprobe for extracting audio from video with youtube-dl
- s-nail # CLI for sending emails (with custom From, remote SMTP server)
- adr-tools # simple tool for managing Architecture Decision Records (.md files) for a project
- direnv    # so I can have dir-specific env vars .envrc in fish/bash/...
- ranger # cmd-line file manager; optional dependencies follow:
- # ranger deps:
-   highlight 
-   atool 
-   media-info 
-   w3m 
-
-)
-
-echo ">> Installing binaries..."
+echo ">> Installing binaries and apps..."
 ## TODO brew upgrade --all # To stop failing when trying to install an already installed but older version
-## TODO brew cleanup
-brew install ${binaries[@]}
-
+brew bundle install --file ~/Brewfile
 brew cleanup
-
-#--------------------------------- CASK
-
-# Apps
-apps=(
-  alfred
-  audacity
-  #soundflower # Uncomment after moving to El Captain
-
-  dropbox
-  google-chrome
-  slack
-  firefox
-  vagrant
-  #sublime-text3
-  #virtualbox
-  atom
-  vlc
-  skype
-  rowanj-gitx
-  emacs
-  tunnelblick
-  p4merge
-  spideroak
-  libreoffice
-  skitch
-  handbrake
-  #chefdk # chef development kit: chef + other tools
-  jetbrains-toolbox
-  iterm2 #iterm2-beta 
-  #gitup # better GitX, Git GUI
-  transmission
-  lighttable
-  qlmarkdown # Markdown support for OSX Quikc Look previews
-  # reactotron # UI for inspecting React JS/Native apps
-  spectacle # Resize, move windows via keyboard shortcut; Donate!
-  docker # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
-  keybase
-)
-
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
-echo ">> Installing apps..."
-brew cask install --appdir="/Applications" ${apps[@]}
-
-# For alternative versions: brew tap caskroom/versions
 
 #--------------------------------- NODE ITSELF
 echo ">> Installing Node.js ... "
@@ -158,8 +38,7 @@ set +o nounset
 set +o errexit
 source $(brew --prefix nvm)/nvm.sh
 
-nvm install v6.10.0
-nvm install v8.1.4
+nvm install v8
 nvm install v10
 nvm alias default v10
 
@@ -170,7 +49,7 @@ set -o errexit
 
 echo ">> Settin up ruby env (rbenv)"
 # GEMs, linter-puppet-lint prereq
-brew install rbenv ruby-build
+# Prereq: brew install rbenv ruby-build
 if [ ! -f ~/.gemrc ]; then
   sudo gem update -n /usr/local/bin --system
   export RBENV_ROOT="$(brew --prefix rbenv)"
@@ -198,7 +77,7 @@ echo ">> Installing npm packages..."
 npm_packages=(
   jshint
   ijavascript # Atom Hydrogen dependency
-  node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
+  #node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
   linux # run Linux on Yosemite easily from the CLI via the xyhve supervisor - https://github.com/maxogden/linux
   gulp
   grunt-cli # Requires to run `npm i` in the project first
@@ -206,11 +85,6 @@ npm_packages=(
   mancy     # Awesome Electron-based Node REPL UI
   nesh nesh-lodash2 nesh-history-search nesh-co
   graphqurl # gq, CLI with autocomplete for talking to GraphQL servers
-)
-iojs_packages=(
-  jshint
-  # ijavascript # Atom Hydrogen dependency; not supported on iojs as yet
-  # node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome) # Not supported yet
 )
 
 set +o nounset
@@ -262,7 +136,7 @@ atom_plugins=(
   imdone-atom # trello-like dashboard for tasks in the code and a todo file
   clipboard-plus # remember past clipboard entries
   pigments # display colors in CSS/...
-  autocomplete-paths # E.g. in require("..") 
+  autocomplete-paths # E.g. in require("..")
   highlight-selected # 2-click a word to highlight its occurences in the file
   docblockr # doc writing support: on Enter, insert * + keep indent., ...
   trailing-spaces # highlight them
@@ -271,7 +145,7 @@ atom_plugins=(
   jumpy # ~ ace-jump; shift-enter
   scratch # Open scratch file with C-A-, -> .atom/scratch
   # Consider: quick-editor # edit css/less/sass directly from the HTML using it
-  # Interesting: tasks; 
+  # Interesting: tasks;
   git-blame
   js-hyperclick # alt-click navigation for JS via Facebook hyperclick
   split-diff
@@ -282,15 +156,6 @@ atom_plugins=(
 )
 
 apm install ${atom_plugins[@]}
-#---------------------------------
-
-if which java > /dev/null && java -version ; then
-  brew install leiningen
-  lein --version &> /dev/null # downloads Clojure if needed
-else
-  echo "WARN: Not installing Leiningen - no java found"
-fi
-
 #---------------------------------
 
 ## Emacs Live
