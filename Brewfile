@@ -10,7 +10,7 @@ tap "shopify/shopify"
 tap "simeji/jid"
 
 cask "java"  # before brewing lein / clojure
-
+cask "java8" # TMP until Clojure projects updated to 9+
 
 brew "ack" # Jakob's deploy checklist
 brew "adr-tools" # simple tool for managing Architecture Decision Records (.md files) for a project
