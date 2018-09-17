@@ -98,3 +98,4 @@ cask "transmission" # Torrent client
 cask "tunnelblick"
 cask "vagrant"
 cask "vlc"
+cask "mucommander"
