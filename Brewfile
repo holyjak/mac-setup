@@ -36,7 +36,7 @@ brew "ffmpeg" # ffprobe for extracting audio from video with youtube-dl
 brew "fish"
 brew "git"
 brew "gnupg"
-brew "gnuplot", args: ["with-aquaterm", "with-x11"]
+brew "gnuplot", args: ["with-aquaterm", "with-x11", "with-qt"]
 #brew "gradle"
 brew "grep" # replace outdated OSX's one
 brew "imagemagick"
@@ -99,3 +99,4 @@ cask "tunnelblick"
 cask "vagrant"
 cask "vlc"
 cask "mucommander"
+cask "aquaterm"   # for gnuplot without X11
