@@ -64,6 +64,7 @@ brew "youtube-dl"  # youtube downloader https://rg3.github.io/youtube-dl/
 brew "zeromq" # Atom Hydrogen dependency
 brew "shopify/shopify/toxiproxy"
 brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
+brew "git-extras"    # `git effort` for change hot spots etc
 
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
