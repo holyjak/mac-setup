@@ -66,6 +66,8 @@ brew "shopify/shopify/toxiproxy"
 brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
 brew "git-extras"    # `git effort` for change hot spots etc
 
+brew "kubectl"
+brew "kubernetes-helm"
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI
