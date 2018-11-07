@@ -103,3 +103,4 @@ cask "vagrant"
 cask "vlc"
 cask "mucommander"
 cask "aquaterm"   # for gnuplot without X11
+cask "fly"        # Concourse CI CLI
