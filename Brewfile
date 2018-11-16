@@ -65,6 +65,7 @@ brew "zeromq" # Atom Hydrogen dependency
 brew "shopify/shopify/toxiproxy"
 brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
 brew "git-extras"    # `git effort` for change hot spots etc
+brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that will check for secrets and prevent commiting them
 
 brew "kubectl"
 brew "kubernetes-helm"
@@ -104,3 +105,4 @@ cask "vlc"
 cask "mucommander"
 cask "aquaterm"   # for gnuplot without X11
 cask "fly"        # Concourse CI CLI
+cask "adobe-acrobat-reader"
