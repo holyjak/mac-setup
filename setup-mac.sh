@@ -153,6 +153,8 @@ atom_plugins=(
   cursor-history # or last-cursor-position ?
   react-es6-snippets # TODO eval
   default-language # to set Markdown as default for new files
+  shell-it         # pass buffer through a shell command
+  language-fish-shell
 )
 
 apm install ${atom_plugins[@]}
