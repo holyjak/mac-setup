@@ -1,4 +1,5 @@
 #!/usr/bin/env bash --norc
+
 set -o nounset # fail on unset variables
 set -o errexit # fail if any statement doesn't return 0
 
@@ -155,6 +156,7 @@ atom_plugins=(
   default-language # to set Markdown as default for new files
   shell-it         # pass buffer through a shell command
   language-fish-shell
+  sequential-number # insert seq. numbers across multiple cursors
 )
 
 apm install ${atom_plugins[@]}
