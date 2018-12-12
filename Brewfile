@@ -69,6 +69,8 @@ brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that 
 
 brew "kubectl"
 brew "kubernetes-helm"
+
+#brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI
