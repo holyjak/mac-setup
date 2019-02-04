@@ -80,7 +80,7 @@ brew "kubernetes-helm"
 #cask "virtualbox"
 cask "alfred"
 cask "atom"
-cask "audacity"
+#cask "audacity"  # requires the old Snow Leopard version of OSX?
 cask "docker" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
 cask "dropbox"
 cask "emacs"
