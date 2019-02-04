@@ -157,6 +157,7 @@ atom_plugins=(
   shell-it         # pass buffer through a shell command
   language-fish-shell
   sequential-number # insert seq. numbers across multiple cursors
+  chlorine          # better Clojure(Script) REPL, see http://corfield.org/blog/2018/12/19/atom-chlorine/
 )
 
 apm install ${atom_plugins[@]}
