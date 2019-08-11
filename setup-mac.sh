@@ -158,8 +158,11 @@ atom_plugins=(
   language-fish-shell
   sequential-number # insert seq. numbers across multiple cursors
   chlorine          # better Clojure(Script) REPL, see http://corfield.org/blog/2018/12/19/atom-chlorine/
+    ink # NEEDED BY chlorine
   language-todo    # highlight TODO, FIXME etc.
-  markdown-table-editor
+  markdown-table-editor # tab -> next cell, ensure all columns same width
+  markdown-writer  # fix numbering, fold, jump to heading, ...
+  parinfer
 )
 
 apm install ${atom_plugins[@]}
