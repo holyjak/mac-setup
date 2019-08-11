@@ -163,6 +163,7 @@ atom_plugins=(
   markdown-table-editor # tab -> next cell, ensure all columns same width
   markdown-writer  # fix numbering, fold, jump to heading, ...
   parinfer
+  lisp-paredit # for ops on SEXPs
 )
 
 apm install ${atom_plugins[@]}
