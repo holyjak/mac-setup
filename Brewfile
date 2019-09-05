@@ -55,7 +55,7 @@ brew "rbenv"
 brew "ruby"  # updated from OSX'
 brew "ruby-build"
 brew "s-nail" # CLI for sending emails (with custom From, remote SMTP server)
-brew "terraform" # HashiCorp infrastructure as a code provisioning
+brew "terraform@0.11" # HashiCorp infrastructure as a code provisioning
 #brew "terragrunt" # terraform wrapper
 brew "vaulted"  # secrets manager for AWS
 brew "wget"
@@ -69,6 +69,14 @@ brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that 
 
 brew "kubectl"
 brew "kubernetes-helm"
+
+# Babashka: > `bb` GraalVM quick Clojure subset interpreter for shell scripts
+# Avail. aliases: clojure.*str*ing, clojure.*set*, clojure.*edn* [read-string only],
+# clojure.java.*shell* [sh only], clojure.java.*io* [as-relative-path, copy, delete-file, file]
+# Java's: System[exit, set/getProperty(ies), getenv, File[canRead/Write,delete[onExit], exists, getName/Parent[File]/Path, is*, list[Files], mkdir[s], ...]
+# Spec vars: *in*, *out*, *command-line-args*
+brew "borkdude/brew/babashka" 
+brew "borkdude/brew/jet" # JSON <> EDN <> Transit
 
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
 ########################## APPS
