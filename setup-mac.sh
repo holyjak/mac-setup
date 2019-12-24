@@ -164,6 +164,7 @@ atom_plugins=(
   markdown-writer  # fix numbering, fold, jump to heading, ...
   parinfer
   lisp-paredit # for ops on SEXPs
+  asciidoc-preview language-asciidoc
 )
 
 apm install ${atom_plugins[@]}
