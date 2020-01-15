@@ -78,6 +78,9 @@ brew "kubernetes-helm"
 brew "borkdude/brew/babashka" 
 brew "borkdude/brew/jet" # JSON <> EDN <> Transit
 
+brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf`
+brew "rust"              # Rust the programming lang
+
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
@@ -107,7 +110,7 @@ cask "skype"
 cask "slack"
 #cask "soundflower" # OSX extension so apps can pass audio to other ones, needs to permit ext. isntall; auth: Matt Ingalls
 cask "spectacle" # Resize, move windows via keyboard shortcut; Donate!
-cask "spideroak"
+#cask "spideroak"   # Fails 1/2020: "Error: Cask 'spideroak' definition is invalid: Token '{:v1=>"spideroak"}' in header line does not match the file name."
 cask "transmission" # Torrent client
 cask "tunnelblick"
 cask "vagrant"
