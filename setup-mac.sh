@@ -27,7 +27,7 @@ brew upgrade
 
 echo ">> Installing binaries and apps..."
 ## TODO brew upgrade --all # To stop failing when trying to install an already installed but older version
-brew bundle install --file ~/Brewfile
+brew bundle install --file ./Brewfile
 brew cleanup
 
 #--------------------------------- NODE ITSELF
@@ -70,8 +70,9 @@ python_packages=(
  "ipython[notebook]"   # Atom Hydrogen dependency
  jinja2 tornado jsonschema pyzmq # IJavascript -> Atom Hydrogen dependency
  virtualfish # Fish wrapper around virtualenv, see http://virtualfish.readthedocs.org/en/latest/install.html
+ jmespath-terminal # cat my.json | jpterm # => interactive json query
 )
-pip2 install ${python_packages[@]}
+pip3 install ${python_packages[@]}
 
 # --------------------------------- NODE PACKAGES
 echo ">> Installing npm packages..."
@@ -162,9 +163,13 @@ atom_plugins=(
   language-todo    # highlight TODO, FIXME etc.
   markdown-table-editor # tab -> next cell, ensure all columns same width
   markdown-writer  # fix numbering, fold, jump to heading, ...
+  # Clojure:
   parinfer
   lisp-paredit # for ops on SEXPs
+  # try: bracket-colorizer atom-cljs-doc  atom-cljfmt 
+
   asciidoc-preview language-asciidoc
+
 )
 
 apm install ${atom_plugins[@]}

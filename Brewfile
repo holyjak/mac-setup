@@ -8,6 +8,7 @@ tap "homebrew/core"
 #tap "nlf/dhyve"
 tap "shopify/shopify"
 tap "simeji/jid"
+tap "clojure/tools"
 
 cask "java"  # before brewing lein / clojure
 cask "java8" # TMP until Clojure projects updated to 9+
@@ -30,7 +31,7 @@ brew "ranger"
     brew "w3m"
 
 brew "rlwrap"  # For better Clojure CLI
-brew "clojure" # Clojure and its clj CLI
+brew "clojure/tools/clojure" # Official Clojure tap for clj, clojure CLIs
 brew "curl", args: ["with-openssl"]
 brew "ffmpeg" # ffprobe for extracting audio from video with youtube-dl
 brew "fish"
@@ -49,7 +50,7 @@ brew "nvm"
 brew "planck"   # ClojureScript REPL
 brew "pre-commit" # see http://pre-commit.com/ - used by some projects
 brew "python"
-brew "python2"
+#brew "python2" # not avail anymore?
 brew "rsync" # 3.1 - while Yosemite still has 2.6
 brew "rbenv"
 brew "ruby"  # updated from OSX'
