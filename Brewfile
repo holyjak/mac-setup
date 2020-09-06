@@ -1,3 +1,4 @@
+# brew bundle --file=~/setup/Brewfile
 cask_args appdir: "/Applications"
 
 ########################## TAPS
@@ -9,9 +10,20 @@ tap "homebrew/core"
 tap "shopify/shopify"
 tap "simeji/jid"
 tap "clojure/tools"
+tap "adoptopenjdk/openjdk"
+
+########################## Mac App Store
+brew "mas"
+# `mas list` - apps installed via M.A.S., `mas search 1Password`
+mas "com.agilebits.onepassword-osx", id: 443987910 # 1Password
+#412522123 com.littlepotatosoftware.BabyProof
+mas "com.safenet.mobilepass.mac", id: 972648459 
+
+######################### Apps & CLIs
 
 cask "java"  # before brewing lein / clojure
 cask "java8" # TMP until Clojure projects updated to 9+
+cask "adoptopenjdk12" # LTS
 
 brew "ack" # Jakob's deploy checklist
 brew "adr-tools" # simple tool for managing Architecture Decision Records (.md files) for a project
@@ -81,6 +93,7 @@ brew "borkdude/brew/jet" # JSON <> EDN <> Transit
 
 brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf`
 brew "rust"              # Rust the programming lang
+brew "borkdude/brew/jet" # json <> edn <> transit
 
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
 ########################## APPS
