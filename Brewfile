@@ -68,7 +68,7 @@ brew "rbenv"
 brew "ruby"  # updated from OSX'
 brew "ruby-build"
 brew "s-nail" # CLI for sending emails (with custom From, remote SMTP server)
-brew "terraform@0.11" # HashiCorp infrastructure as a code provisioning
+brew "terraform" # HashiCorp infrastructure as a code provisioning
 #brew "terragrunt" # terraform wrapper
 brew "vaulted"  # secrets manager for AWS
 brew "wget"
@@ -133,3 +133,4 @@ cask "mucommander"
 cask "aquaterm"   # for gnuplot without X11
 cask "fly"        # Concourse CI CLI
 cask "adobe-acrobat-reader"
+cask "freeze"    # AWS Glacier client
