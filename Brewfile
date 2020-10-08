@@ -11,6 +11,7 @@ tap "shopify/shopify"
 tap "simeji/jid"
 tap "clojure/tools"
 tap "adoptopenjdk/openjdk"
+tap "aws/tap"
 
 ########################## Mac App Store
 brew "mas"
@@ -95,6 +96,8 @@ brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf`
 brew "rust"              # Rust the programming lang
 brew "borkdude/brew/jet" # json <> edn <> transit
 
+brew "aws-sam-cli"       # AWS Lambda local dev etc.
+
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
@@ -134,3 +137,4 @@ cask "aquaterm"   # for gnuplot without X11
 cask "fly"        # Concourse CI CLI
 cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
+# cask "keycast" # display keys typed on screen - for screencasts
