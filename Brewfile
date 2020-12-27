@@ -138,3 +138,4 @@ cask "fly"        # Concourse CI CLI
 cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
 # cask "keycast" # display keys typed on screen - for screencasts
+cask "rsyncosx"  # rsync UI
