@@ -23,12 +23,11 @@ mas "com.safenet.mobilepass.mac", id: 972648459
 ######################### Apps & CLIs
 
 cask "java"  # before brewing lein / clojure
-cask "java8" # TMP until Clojure projects updated to 9+
 cask "adoptopenjdk12" # LTS
 
-brew "ack" # Jakob's deploy checklist
+#brew "ack" # used by Jakob's deploy checklist
 brew "adr-tools" # simple tool for managing Architecture Decision Records (.md files) for a project
-brew "ansible"
+#brew "ansible"
 brew "awscli"
 brew "coreutils"
 brew "corkscrew"  # ssh tunneling
@@ -37,7 +36,7 @@ brew "editorconfig"
 brew "findutils"
 # ngrok v2 is closed source, install manually; # expose a local server behind a NAT or firewall to the internet
 
-brew "ranger"
+brew "ranger" # EXPERIMENT - console file manager with VI key bindings
     brew "atool"
     brew "highlight"
     brew "media-info"
@@ -53,14 +52,15 @@ brew "gnupg"
 brew "gnuplot", args: ["with-aquaterm", "with-x11", "with-qt"]
 #brew "gradle"
 brew "grep" # replace outdated OSX's one
+brew "ripgrep" # -> binary `rg`; faster grep in Rust
 brew "imagemagick"
-brew "jq"   # json processing from CLI
+brew "jq"   # json processing from CLI; see also `jid` below
 #brew "kubernetes-cli"
 brew "leiningen"
 brew "maven"
 brew "nvm"
 #brew "packer"  # create AMIs etc
-brew "planck"   # ClojureScript REPL
+#brew "planck"   # ClojureScript REPL
 brew "pre-commit" # see http://pre-commit.com/ - used by some projects
 brew "python"
 #brew "python2" # not avail anymore?
@@ -75,14 +75,13 @@ brew "vaulted"  # secrets manager for AWS
 brew "wget"
 brew "youtube-dl"  # youtube downloader https://rg3.github.io/youtube-dl/
 #brew "yq" # Process YAML from CLI
-brew "zeromq" # Atom Hydrogen dependency
 brew "shopify/shopify/toxiproxy"
 brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
 brew "git-extras"    # `git effort` for change hot spots etc
 brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that will check for secrets and prevent commiting them
 
-brew "kubectl"
-brew "kubernetes-helm"
+#brew "kubectl"
+#brew "kubernetes-helm"
 
 # Babashka: > `bb` GraalVM quick Clojure subset interpreter for shell scripts
 # Avail. aliases: clojure.*str*ing, clojure.*set*, clojure.*edn* [read-string only],
@@ -92,7 +91,7 @@ brew "kubernetes-helm"
 brew "borkdude/brew/babashka" 
 brew "borkdude/brew/jet" # JSON <> EDN <> Transit
 
-brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf`
+#brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf` # Perf issues?!
 brew "rust"              # Rust the programming lang
 brew "borkdude/brew/jet" # json <> edn <> transit
 
@@ -108,10 +107,11 @@ brew "aws-sam-cli"       # AWS Lambda local dev etc.
 #cask "virtualbox"
 cask "alfred"
 cask "atom"
+brew "zeromq" # Atom Hydrogen dependency
 #cask "audacity"  # requires the old Snow Leopard version of OSX?
 cask "docker" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
 cask "dropbox"
-cask "emacs"
+#cask "emacs"
 cask "firefox"
 cask "google-chrome"
 cask "handbrake" # Video ripping / transforming
@@ -119,18 +119,18 @@ cask "iterm2" #iterm2-beta
 cask "jetbrains-toolbox"
 cask "keybase"
 cask "libreoffice"
-cask "lighttable"
+#cask "lighttable"
 cask "p4v" # formerly p4merge
 cask "qlmarkdown" # Markdown support for OSX Quikc Look previews
-cask "skitch"
+cask "skitch"     # screenshots
 cask "skype"
 cask "slack"
 #cask "soundflower" # OSX extension so apps can pass audio to other ones, needs to permit ext. isntall; auth: Matt Ingalls
 cask "spectacle" # Resize, move windows via keyboard shortcut; Donate!
 #cask "spideroak"   # Fails 1/2020: "Error: Cask 'spideroak' definition is invalid: Token '{:v1=>"spideroak"}' in header line does not match the file name."
-cask "transmission" # Torrent client
-cask "tunnelblick"
-cask "vagrant"
+#cask "transmission" # Torrent client
+#cask "tunnelblick"
+#cask "vagrant"
 cask "vlc"
 cask "mucommander"
 cask "aquaterm"   # for gnuplot without X11
