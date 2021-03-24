@@ -12,6 +12,9 @@ tap "simeji/jid"
 tap "clojure/tools"
 tap "adoptopenjdk/openjdk"
 tap "aws/tap"
+tap "go-task/tap"
+
+brew "go-task" # better make, for Channel API
 
 ########################## Mac App Store
 brew "mas"
@@ -96,6 +99,8 @@ brew "rust"              # Rust the programming lang
 brew "borkdude/brew/jet" # json <> edn <> transit
 
 brew "aws-sam-cli"       # AWS Lambda local dev etc.
+
+brew "starship"          # cross-OS shell promt
 
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
 ########################## APPS
