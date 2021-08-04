@@ -13,6 +13,7 @@ tap "clojure/tools"
 tap "adoptopenjdk/openjdk"
 tap "aws/tap"
 tap "go-task/tap"
+tap "borkdude/brew"
 
 brew "go-task" # better make, for Channel API
 
@@ -21,12 +22,10 @@ brew "mas"
 # `mas list` - apps installed via M.A.S., `mas search 1Password`
 mas "com.agilebits.onepassword-osx", id: 443987910 # 1Password
 #412522123 com.littlepotatosoftware.BabyProof
-mas "com.safenet.mobilepass.mac", id: 972648459 
 
 ######################### Apps & CLIs
 
-cask "java"  # before brewing lein / clojure
-cask "adoptopenjdk12" # LTS
+cask "adoptopenjdk11" # LTS # before brewing lein / clojure
 
 #brew "ack" # used by Jakob's deploy checklist
 brew "adr-tools" # simple tool for managing Architecture Decision Records (.md files) for a project
@@ -47,12 +46,12 @@ brew "ranger" # EXPERIMENT - console file manager with VI key bindings
 
 brew "rlwrap"  # For better Clojure CLI
 brew "clojure/tools/clojure" # Official Clojure tap for clj, clojure CLIs
-brew "curl", args: ["with-openssl"]
+brew "curl" #, args: ["with-openssl"] - not supported anymore?
 brew "ffmpeg" # ffprobe for extracting audio from video with youtube-dl
 brew "fish"
 brew "git"
 brew "gnupg"
-brew "gnuplot", args: ["with-aquaterm", "with-x11", "with-qt"]
+#brew "gnuplot", args: ["with-aquaterm", "with-x11", "with-qt"] # OBS: with-aquaterm not supported anymore?
 #brew "gradle"
 brew "grep" # replace outdated OSX's one
 brew "ripgrep" # -> binary `rg`; faster grep in Rust
@@ -111,7 +110,8 @@ brew "starship"          # cross-OS shell promt
 #cask "sublime-text3"
 #cask "virtualbox"
 cask "alfred"
-cask "atom"
+#cask "atom"
+cask "visual-studio-code"
 brew "zeromq" # Atom Hydrogen dependency
 #cask "audacity"  # requires the old Snow Leopard version of OSX?
 cask "docker" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
@@ -144,3 +144,8 @@ cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
 # cask "keycast" # display keys typed on screen - for screencasts
 cask "rsyncosx"  # rsync UI
+cask "rectangle" # window manager (mv, resize, ..) - replacement for discontinued Spectacle
+cask "gpg-suite-no-mail" # make working with GPG signing (eg git commits) easier and integr. with Keychain
+cask "dash"      # document browser
+cask "sourcetree" # git repo browser etc
+cask "veracrypt" # ardoq
