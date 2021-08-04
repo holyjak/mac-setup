@@ -30,9 +30,25 @@ echo ">> Installing binaries and apps..."
 brew bundle install --file ./Brewfile
 brew cleanup
 
+#--------------------------------- DOTFILES
+echo ">> Setting up dotfiles..."
+
+if [ ! -d ~/dotfiles ]; then
+  git clone -b dotf https://github.com/holyjak/dotfiles.git ~/dotfiles
+  ( cd ~/dotfiles; git remote set-url origin git@github.com:holyjak/dotfiles.git )
+  ~/dotfiles/symlink.sh
+fi
+
+#--------------------------------- CLOJURE
+echo ">> Setting up clojure-deps-edn..."
+if [ ! -d ~/clojure ]; then
+  git clone clone git@github.com:holyjak/clojure-deps-edn.git ~/.clojure
+fi
+
 #--------------------------------- NODE ITSELF
 echo ">> Installing Node.js ... "
 export NVM_DIR=~/.nvm
+file -E $NVM_DIR || mkdir $NVM_DIR
 # Add a link to fix nvm.fish:
 ln -fs $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
 set +o nounset
@@ -99,17 +115,17 @@ set -o nounset
 set -o errexit
 
 #--------------------------------- VAGRANT
-echo ">> Installing Vagrant plugins..."
-vagrant_plugins=(
-  vagrant-vbguest
-  vagrant-proxyconf
-  vagrant-hostmanager
-)
+# echo ">> Installing Vagrant plugins..."
+# vagrant_plugins=(
+#   vagrant-vbguest
+#   vagrant-proxyconf
+#   vagrant-hostmanager
+# )
 
-vagrant plugin install ${vagrant_plugins[@]}
+# vagrant plugin install ${vagrant_plugins[@]}
 
 #--------------------------------- ATOM
-echo ">> Installing Atom plugins..."
+#echo ">> Installing Atom plugins..."
 
 atom_plugins=(
   linter
@@ -172,26 +188,18 @@ atom_plugins=(
 
 )
 
-apm install ${atom_plugins[@]}
+#apm install ${atom_plugins[@]}
 #---------------------------------
 
 ## Emacs Live
-if [ ! -d ~/.emacs.d ]; then
-  echo "INFO Installing Emacs Live ..."
-  git clone git@github.com:overtone/emacs-live.git ~/.emacs.d
-else
-  echo "NOTICE ~/.emacs.d/ present, not installing Emacs Live"
-fi
+#if [ ! -d ~/.emacs.d ]; then
+#  echo "INFO Installing Emacs Live ..."
+#  git clone git@github.com:overtone/emacs-live.git ~/.emacs.d
+#else
+#  echo "NOTICE ~/.emacs.d/ present, not installing Emacs Live"
+#fi
 
 #--------------------------------- LAST
-
-echo ">> Setting up dotfiles..."
-
-if [ ! -d ~/dotfiles ]; then
-  git clone -b dotf https://github.com/jakubholynet/dotfiles.git ~/dotfiles
-  ( cd ~/dotfiles; git remote set-url origin git@github.com:jakubholynet/dotfiles.git )
-  ~/dotfiles/symlink.sh
-fi
 
 ## TODO: Update path in .profile
 # $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
