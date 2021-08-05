@@ -41,8 +41,9 @@ fi
 
 #--------------------------------- CLOJURE
 echo ">> Setting up clojure-deps-edn..."
-if [ ! -d ~/clojure ]; then
+if [ ! -d ~/.clojure ]; then
   git clone clone git@github.com:holyjak/clojure-deps-edn.git ~/.clojure
+  ( cd ~/.clojure; git remote add upstream https://github.com/practicalli/clojure-deps-edn.git )
 fi
 
 #--------------------------------- NODE ITSELF
@@ -91,28 +92,28 @@ python_packages=(
 pip3 install ${python_packages[@]}
 
 # --------------------------------- NODE PACKAGES
-echo ">> Installing npm packages..."
-npm_packages=(
-  jshint
-  ijavascript # Atom Hydrogen dependency
-  #node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
-  linux # run Linux on Yosemite easily from the CLI via the xyhve supervisor - https://github.com/maxogden/linux
-  gulp
-  grunt-cli # Requires to run `npm i` in the project first
-  nodemon   # Monitor a dir for changes (with filters), exec a command
-  mancy     # Awesome Electron-based Node REPL UI
-  nesh nesh-lodash2 nesh-history-search nesh-co
-  graphqurl # gq, CLI with autocomplete for talking to GraphQL servers
-)
+# echo ">> Installing npm packages..."
+# npm_packages=(
+#   #jshint
+#   #javascript # Atom Hydrogen dependency
+#   #node-inspector # debugger (=> node-debug <your app.js> => loads in Chrome)
+#   #linux # run Linux on Yosemite easily from the CLI via the xyhve supervisor - https://github.com/maxogden/linux
+#   #gulp
+#   #grunt-cli # Requires to run `npm i` in the project first
+#   #nodemon   # Monitor a dir for changes (with filters), exec a command
+#   #mancy     # Awesome Electron-based Node REPL UI
+#   #nesh nesh-lodash2 nesh-history-search nesh-co
+#   #graphqurl # gq, CLI with autocomplete for talking to GraphQL servers
+# )
 
-set +o nounset
-set +o errexit
+# set +o nounset
+# set +o errexit
 
-nvm use default
-npm install -g ${npm_packages[@]}
+# nvm use default
+# npm install -g ${npm_packages[@]}
 
-set -o nounset
-set -o errexit
+# set -o nounset
+# set -o errexit
 
 #--------------------------------- VAGRANT
 # echo ">> Installing Vagrant plugins..."
@@ -199,6 +200,12 @@ atom_plugins=(
 #  echo "NOTICE ~/.emacs.d/ present, not installing Emacs Live"
 #fi
 
+#--------------------------------- Allow newly installed apps
+# TODO Allow running newly installed apps
+#      But how to know which apps are new? Or just run always?
+#      Ex.:
+#      sudo xattr -dr com.apple.quarantine /Applications/iTerm.app
+
 #--------------------------------- LAST
 
 ## TODO: Update path in .profile
@@ -214,4 +221,16 @@ atom_plugins=(
 ## TODO Config OSX, apps
 # TODO tunnelblick must be directly in /Applications => mv mv /opt/homebrew-cask/Caskroom/tunnelblick/3.5.0_build_4265/Tunnelblick.app there
 
-echo ">> DONE SETTING UP. HAVE FUN!"
+if [ -f .initial-installation-done ]; then
+   echo ">> DONE SETTING UP. HAVE FUN!"
+else
+   echo > .initial-installation-done
+   cat <<- EOF
+        >> DONE SETTING UP. HAVE FUN!
+
+         TODO:
+        * in iTerm: Prefrences > General > Preferences - check "Load preferences from a 
+	custom folder..." and set it to <backups>/zalohy/iTerm-preferences; also set 
+	"Save changes" to Automatically
+EOF
+fi
