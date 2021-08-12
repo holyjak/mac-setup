@@ -22,6 +22,7 @@ brew "mas"
 # `mas list` - apps installed via M.A.S., `mas search 1Password`
 mas "1Password 7", id: 1333542190
 #412522123 com.littlepotatosoftware.BabyProof
+mas "Evernote", id: 406056744
 
 ######################### Apps & CLIs
 
