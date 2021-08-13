@@ -128,7 +128,6 @@ cask "libreoffice"
 #cask "lighttable"
 cask "p4v" # formerly p4merge
 cask "qlmarkdown" # Markdown support for OSX Quikc Look previews
-cask "skitch"     # screenshots
 cask "skype"
 cask "slack"
 #cask "soundflower" # OSX extension so apps can pass audio to other ones, needs to permit ext. isntall; auth: Matt Ingalls
