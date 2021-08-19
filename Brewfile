@@ -114,6 +114,7 @@ cask "alfred"
 #cask "atom"
 cask "visual-studio-code"
 brew "zeromq" # Atom Hydrogen dependency
+brew "sass/sass/sass" # For my blog; Dart SASS
 #cask "audacity"  # requires the old Snow Leopard version of OSX?
 cask "docker" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
 cask "dropbox"
