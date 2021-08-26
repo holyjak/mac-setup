@@ -9,11 +9,12 @@ tap "homebrew/core"
 #tap "nlf/dhyve"
 tap "shopify/shopify"
 tap "simeji/jid"
-tap "clojure/tools"
 tap "adoptopenjdk/openjdk"
 tap "aws/tap"
 tap "go-task/tap"
+tap "clojure/tools"
 tap "borkdude/brew"
+tap "clojure-lsp/brew"
 
 brew "go-task" # better make, for Channel API
 
@@ -47,6 +48,15 @@ brew "ranger" # EXPERIMENT - console file manager with VI key bindings
 
 brew "rlwrap"  # For better Clojure CLI
 brew "clojure/tools/clojure" # Official Clojure tap for clj, clojure CLIs
+brew "clojure-lsp/brew/clojure-lsp-native" # clojure-lsp LSP server for use with Cursive etc., kondo built in
+# Babashka: > `bb` GraalVM quick Clojure subset interpreter for shell scripts
+# Avail. aliases: clojure.*str*ing, clojure.*set*, clojure.*edn* [read-string only],
+# clojure.java.*shell* [sh only], clojure.java.*io* [as-relative-path, copy, delete-file, file]
+# Java's: System[exit, set/getProperty(ies), getenv, File[canRead/Write,delete[onExit], exists, getName/Parent[File]/Path, is*, list[Files], mkdir[s], ...]
+# Spec vars: *in*, *out*, *command-line-args*
+brew "borkdude/brew/babashka" 
+brew "borkdude/brew/jet" # JSON <> EDN <> Transit
+
 brew "curl" #, args: ["with-openssl"] - not supported anymore?
 brew "ffmpeg" # ffprobe for extracting audio from video with youtube-dl
 brew "fish"
@@ -86,17 +96,9 @@ brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that 
 #brew "kubectl"
 #brew "kubernetes-helm"
 
-# Babashka: > `bb` GraalVM quick Clojure subset interpreter for shell scripts
-# Avail. aliases: clojure.*str*ing, clojure.*set*, clojure.*edn* [read-string only],
-# clojure.java.*shell* [sh only], clojure.java.*io* [as-relative-path, copy, delete-file, file]
-# Java's: System[exit, set/getProperty(ies), getenv, File[canRead/Write,delete[onExit], exists, getName/Parent[File]/Path, is*, list[Files], mkdir[s], ...]
-# Spec vars: *in*, *out*, *command-line-args*
-brew "borkdude/brew/babashka" 
-brew "borkdude/brew/jet" # JSON <> EDN <> Transit
 
 #brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf` # Perf issues?!
 brew "rust"              # Rust the programming lang
-brew "borkdude/brew/jet" # json <> edn <> transit
 
 brew "aws-sam-cli"       # AWS Lambda local dev etc.
 
@@ -150,3 +152,4 @@ cask "gpg-suite-no-mail" # make working with GPG signing (eg git commits) easier
 cask "dash"      # document browser
 cask "sourcetree" # git repo browser etc
 cask "veracrypt" # ardoq
+cask "vivaldi"   # browser
