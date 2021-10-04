@@ -24,6 +24,7 @@ brew "mas"
 mas "1Password 7", id: 1333542190
 #412522123 com.littlepotatosoftware.BabyProof
 mas "Evernote", id: 406056744
+mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top bar
 
 ######################### Apps & CLIs
 
@@ -56,6 +57,8 @@ brew "clojure-lsp/brew/clojure-lsp-native" # clojure-lsp LSP server for use with
 # Spec vars: *in*, *out*, *command-line-args*
 brew "borkdude/brew/babashka" 
 brew "borkdude/brew/jet" # JSON <> EDN <> Transit
+brew "babashka/brew/neil"
+# brew install borkdude/brew/clj-kondo
 
 brew "curl" #, args: ["with-openssl"] - not supported anymore?
 brew "ffmpeg" # ffprobe for extracting audio from video with youtube-dl
@@ -105,6 +108,8 @@ brew "aws-sam-cli"       # AWS Lambda local dev etc.
 brew "starship"          # cross-OS shell promt
 
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
+brew "geckodriver"  # WebDriver for Firefox - for https://github.com/igrishaev/etaoin
+brew "bat"          # better cat, w/ git integr. and syntax highl.: --language clojure
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI
@@ -153,3 +158,4 @@ cask "dash"      # document browser
 cask "sourcetree" # git repo browser etc
 cask "veracrypt" # ardoq
 cask "vivaldi"   # browser
+# cask "pop"   # https://pop.com/ - ScreenHero reborn - remote pairprogrammin
