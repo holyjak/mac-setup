@@ -110,6 +110,7 @@ brew "starship"          # cross-OS shell promt
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
 brew "geckodriver"  # WebDriver for Firefox - for https://github.com/igrishaev/etaoin
 brew "bat"          # better cat, w/ git integr. and syntax highl.: --language clojure
+brew "graphviz"     # incl. `dot` used by VS Code PlantUML plugin
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI
