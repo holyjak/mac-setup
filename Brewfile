@@ -19,12 +19,14 @@ tap "clojure-lsp/brew"
 brew "go-task" # better make, for Channel API
 
 ########################## Mac App Store
+# See mas list
 brew "mas"
 # `mas list` - apps installed via M.A.S., `mas search 1Password`
 mas "1Password 7", id: 1333542190
 #412522123 com.littlepotatosoftware.BabyProof
 mas "Evernote", id: 406056744
 mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top bar
+mas "Octofile", id: 1463726615    # Android <> Mac file transfer mobile & desktop app
 
 ######################### Apps & CLIs
 
@@ -111,6 +113,7 @@ brew "starship"          # cross-OS shell promt
 brew "geckodriver"  # WebDriver for Firefox - for https://github.com/igrishaev/etaoin
 brew "bat"          # better cat, w/ git integr. and syntax highl.: --language clojure
 brew "graphviz"     # incl. `dot` used by VS Code PlantUML plugin
+brew "fd"           # better find - https://github.com/sharkdp/fd
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI
