@@ -103,7 +103,7 @@ brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that 
 
 
 #brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf` # Perf issues?!
-brew "rust"              # Rust the programming lang
+brew "rustup-init"        # Rust the programming lang tooling - run to install/update rust ('rust' lacks 'rustup)
 
 brew "aws-sam-cli"       # AWS Lambda local dev etc.
 
@@ -163,3 +163,4 @@ cask "sourcetree" # git repo browser etc
 cask "veracrypt" # ardoq
 cask "vivaldi"   # browser
 # cask "pop"   # https://pop.com/ - ScreenHero reborn - remote pairprogrammin
+cask "obsidian"  # https://obsidian.md - Markdown-based note mgmt app
