@@ -30,7 +30,7 @@ mas "Octofile", id: 1463726615    # Android <> Mac file transfer mobile & deskto
 
 ######################### Apps & CLIs
 
-cask "adoptopenjdk11" # LTS # before brewing lein / clojure
+cask "temurin" # OpenJDK by Eclipse, LTS; install before brewing lein / clojure; TODO: Change to temurin17 once v18 out
 
 #brew "ack" # used by Jakob's deploy checklist
 brew "adr-tools" # simple tool for managing Architecture Decision Records (.md files) for a project
@@ -121,7 +121,7 @@ brew "fd"           # better find - https://github.com/sharkdp/fd
 #cask "rowanj-gitx"
 #cask "sublime-text3"
 #cask "virtualbox"
-cask "alfred"
+#cask "alfred" # replaced by raycast
 #cask "atom"
 cask "visual-studio-code"
 brew "zeromq" # Atom Hydrogen dependency
@@ -156,7 +156,7 @@ cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
 # cask "keycast" # display keys typed on screen - for screencasts
 cask "rsyncosx"  # rsync UI
-cask "rectangle" # window manager (mv, resize, ..) - replacement for discontinued Spectacle
+#cask "rectangle" # window manager (mv, resize, ..) - replacement for discontinued Spectacle # Replaced by raycast
 cask "gpg-suite-no-mail" # make working with GPG signing (eg git commits) easier and integr. with Keychain
 cask "dash"      # document browser
 cask "sourcetree" # git repo browser etc
@@ -164,3 +164,6 @@ cask "veracrypt" # ardoq
 cask "vivaldi"   # browser
 # cask "pop"   # https://pop.com/ - ScreenHero reborn - remote pairprogrammin
 cask "obsidian"  # https://obsidian.md - Markdown-based note mgmt app
+cask "temurin11" # OpenJDK by Eclipse, v.11 LTS; install before brewing lein / clojure
+cask "flux"      # change color, light scheme in the evening
+cask "raycast"   # app & cmd launcher, window management & much more
