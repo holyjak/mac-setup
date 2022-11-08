@@ -114,8 +114,10 @@ brew "geckodriver"  # WebDriver for Firefox - for https://github.com/igrishaev/e
 brew "bat"          # better cat, w/ git integr. and syntax highl.: --language clojure
 brew "graphviz"     # incl. `dot` used by VS Code PlantUML plugin
 brew "fd"           # better find - https://github.com/sharkdp/fd
+brew "act"          # run GitHub actions locally - https://github.com/nektos/act
 brew "fnm"          # fast Node version mgr in Rust, https://github.com/Schniz/fnm
 ########################## APPS
+#cask "macfuse" # user-space filesystem support; sshfs needs to be installed manually from https://osxfuse.github.io/ ?
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI
 #cask "reactotron" # UI for inspecting React JS/Native apps
@@ -165,3 +167,4 @@ cask "obsidian"  # https://obsidian.md - Markdown-based note mgmt app
 cask "temurin11" # OpenJDK by Eclipse, v.11 LTS; install before brewing lein / clojure
 cask "flux"      # change color, light scheme in the evening
 cask "raycast"   # app & cmd launcher, window management & much more
+cask "1password/tap/1password-cli" # 1Password 8+ CLI, called `op`
