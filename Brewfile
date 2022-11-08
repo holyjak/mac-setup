@@ -22,7 +22,7 @@ brew "go-task" # better make, for Channel API
 # See mas list
 brew "mas"
 # `mas list` - apps installed via M.A.S., `mas search 1Password`
-mas "1Password 7", id: 1333542190
+# mas "1Password 7", id: 1333542190 # FIXME 1Password 8 not available in the store yet (only for iDevices)
 #412522123 com.littlepotatosoftware.BabyProof
 mas "Evernote", id: 406056744
 mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top bar
