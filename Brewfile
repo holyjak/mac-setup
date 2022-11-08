@@ -87,9 +87,9 @@ brew "rbenv"
 brew "ruby"  # updated from OSX'
 brew "ruby-build"
 brew "s-nail" # CLI for sending emails (with custom From, remote SMTP server)
-brew "terraform" # HashiCorp infrastructure as a code provisioning
+#brew "terraform" # HashiCorp infrastructure as a code provisioning
 #brew "terragrunt" # terraform wrapper
-brew "vaulted"  # secrets manager for AWS
+#brew "vaulted"  # secrets manager for AWS
 brew "wget"
 brew "youtube-dl"  # youtube downloader https://rg3.github.io/youtube-dl/
 #brew "yq" # Process YAML from CLI
@@ -125,7 +125,7 @@ brew "fnm"          # fast Node version mgr in Rust, https://github.com/Schniz/f
 #cask "alfred" # replaced by raycast
 #cask "atom"
 cask "visual-studio-code"
-brew "zeromq" # Atom Hydrogen dependency
+#brew "zeromq" # Atom Hydrogen dependency
 brew "sass/sass/sass" # For my blog; Dart SASS
 #cask "audacity"  # requires the old Snow Leopard version of OSX?
 cask "docker" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
@@ -144,7 +144,6 @@ cask "qlmarkdown" # Markdown support for OSX Quikc Look previews
 cask "skype"
 cask "slack"
 #cask "soundflower" # OSX extension so apps can pass audio to other ones, needs to permit ext. isntall; auth: Matt Ingalls
-cask "spectacle" # Resize, move windows via keyboard shortcut; Donate!
 #cask "spideroak"   # Fails 1/2020: "Error: Cask 'spideroak' definition is invalid: Token '{:v1=>"spideroak"}' in header line does not match the file name."
 #cask "transmission" # Torrent client
 #cask "tunnelblick"
@@ -152,12 +151,10 @@ cask "spectacle" # Resize, move windows via keyboard shortcut; Donate!
 cask "vlc"
 cask "mucommander"
 cask "aquaterm"   # for gnuplot without X11
-cask "fly"        # Concourse CI CLI
 cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
 # cask "keycast" # display keys typed on screen - for screencasts
 cask "rsyncosx"  # rsync UI
-#cask "rectangle" # window manager (mv, resize, ..) - replacement for discontinued Spectacle # Replaced by raycast
 cask "gpg-suite-no-mail" # make working with GPG signing (eg git commits) easier and integr. with Keychain
 cask "dash"      # document browser
 cask "sourcetree" # git repo browser etc
