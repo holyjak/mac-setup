@@ -114,6 +114,7 @@ brew "geckodriver"  # WebDriver for Firefox - for https://github.com/igrishaev/e
 brew "bat"          # better cat, w/ git integr. and syntax highl.: --language clojure
 brew "graphviz"     # incl. `dot` used by VS Code PlantUML plugin
 brew "fd"           # better find - https://github.com/sharkdp/fd
+brew "fnm"          # fast Node version mgr in Rust, https://github.com/Schniz/fnm
 ########################## APPS
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI

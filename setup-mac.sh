@@ -47,18 +47,18 @@ if [ ! -d ~/.clojure ]; then
 fi
 
 #--------------------------------- NODE ITSELF
-echo ">> Installing Node.js ... "
-export NVM_DIR=~/.nvm
-file -E $NVM_DIR || mkdir $NVM_DIR
+#echo ">> Installing Node.js ... "
+#export NVM_DIR=~/.nvm
+#file -E $NVM_DIR || mkdir $NVM_DIR
 # Add a link to fix nvm.fish:
-ln -fs $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
-set +o nounset
-set +o errexit
-source $(brew --prefix nvm)/nvm.sh
+#ln -fs $(brew --prefix nvm)/nvm.sh $NVM_DIR/nvm.sh
+#set +o nounset
+#set +o errexit
+#source $(brew --prefix nvm)/nvm.sh
 
-nvm install v8
-nvm install v10
-nvm alias default v10
+#nvm install v8
+#nvm install v10
+#nvm alias default v10
 
 set -o nounset
 set -o errexit
@@ -232,5 +232,6 @@ else
         * in iTerm: Prefrences > General > Preferences - check "Load preferences from a 
 	custom folder..." and set it to <backups>/zalohy/iTerm-preferences; also set 
 	"Save changes" to Automatically
+        * Execute `fnm completions --shell fish`
 EOF
 fi
