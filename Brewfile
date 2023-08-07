@@ -118,6 +118,7 @@ brew "act"          # run GitHub actions locally - https://github.com/nektos/act
 brew "fnm"          # fast Node version mgr in Rust, https://github.com/Schniz/fnm
 # brew httpie # smarter, far better alternative to curl for playing w/ APIs, see httpie.org - TRY OUT
 brew "buildpacks/tap/pack" # buildpacks.io CLI tool for running Docker-based builds of code
+brew "flyctl" # the fly CLI for fly.io (of the same name as Concourse CI one)
 ########################## APPS
 #cask "macfuse" # user-space filesystem support; sshfs needs to be installed manually from https://osxfuse.github.io/ ?
 #cask "chefdk" # chef development kit: chef + other tools
