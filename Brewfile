@@ -3,9 +3,7 @@ cask_args appdir: "/Applications"
 
 ########################## TAPS
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 #tap "nlf/dhyve"
 tap "shopify/shopify"
 tap "simeji/jid"
