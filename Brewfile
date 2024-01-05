@@ -117,6 +117,7 @@ brew "fnm"          # fast Node version mgr in Rust, https://github.com/Schniz/f
 # brew httpie # smarter, far better alternative to curl for playing w/ APIs, see httpie.org - TRY OUT
 brew "buildpacks/tap/pack" # buildpacks.io CLI tool for running Docker-based builds of code
 brew "flyctl" # the fly CLI for fly.io (of the same name as Concourse CI one)
+brew "git-delta" # syntax-highlighting diff pager for git etc
 ########################## APPS
 #cask "macfuse" # user-space filesystem support; sshfs needs to be installed manually from https://osxfuse.github.io/ ?
 #cask "chefdk" # chef development kit: chef + other tools
