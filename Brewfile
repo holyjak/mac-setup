@@ -3,7 +3,7 @@ cask_args appdir: "/Applications"
 
 ########################## TAPS
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
+#tap "homebrew/cask-versions" # not exists anymore?
 #tap "nlf/dhyve"
 tap "shopify/shopify"
 tap "simeji/jid"
@@ -24,7 +24,8 @@ brew "mas"
 #412522123 com.littlepotatosoftware.BabyProof
 mas "Evernote", id: 406056744
 mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top bar
-mas "Octofile", id: 1463726615    # Android <> Mac file transfer mobile & desktop app
+#mas "Octofile", id: 1463726615    # Android <> Mac file transfer mobile & desktop app
+mas "Slack", id: 803453959
 
 ######################### Apps & CLIs
 
@@ -33,7 +34,7 @@ cask "temurin" # OpenJDK by Eclipse, LTS; install before brewing lein / clojure;
 #brew "ack" # used by Jakob's deploy checklist
 brew "adr-tools" # simple tool for managing Architecture Decision Records (.md files) for a project
 #brew "ansible"
-brew "awscli"
+#brew "awscli"
 brew "coreutils"
 brew "corkscrew"  # ssh tunneling
 brew "direnv"       # so I can have dir-specific env vars .envrc in fish/bash/...
@@ -41,11 +42,11 @@ brew "editorconfig"
 brew "findutils"
 # ngrok v2 is closed source, install manually; # expose a local server behind a NAT or firewall to the internet
 
-brew "ranger" # EXPERIMENT - console file manager with VI key bindings
-    brew "atool"
-    brew "highlight"
-    brew "media-info"
-    brew "w3m"
+# brew "ranger" # EXPERIMENT - console file manager with VI key bindings
+#     brew "atool"
+#     brew "highlight"
+#     brew "media-info"
+#     brew "w3m"
 
 brew "rlwrap"  # For better Clojure CLI
 brew "clojure/tools/clojure" # Official Clojure tap for clj, clojure CLIs
@@ -67,7 +68,7 @@ brew "git"
 brew "gnupg"
 #brew "gnuplot", args: ["with-aquaterm", "with-x11", "with-qt"] # OBS: with-aquaterm not supported anymore?
 #brew "gradle"
-brew "grep" # replace outdated OSX's one
+#brew "grep" # replace outdated OSX's one
 brew "ripgrep" # -> binary `rg`; faster grep in Rust
 brew "imagemagick"
 brew "jq"   # json processing from CLI; see also `jid` below
@@ -81,9 +82,9 @@ brew "pre-commit" # see http://pre-commit.com/ - used by some projects
 brew "python"
 #brew "python2" # not avail anymore?
 brew "rsync" # 3.1 - while Yosemite still has 2.6
-brew "rbenv"
-brew "ruby"  # updated from OSX'
-brew "ruby-build"
+#brew "rbenv"
+#brew "ruby"  # updated from OSX'
+#brew "ruby-build"
 brew "s-nail" # CLI for sending emails (with custom From, remote SMTP server)
 #brew "terraform" # HashiCorp infrastructure as a code provisioning
 #brew "terragrunt" # terraform wrapper
@@ -91,8 +92,8 @@ brew "s-nail" # CLI for sending emails (with custom From, remote SMTP server)
 brew "wget"
 brew "youtube-dl"  # youtube downloader https://rg3.github.io/youtube-dl/
 #brew "yq" # Process YAML from CLI
-brew "shopify/shopify/toxiproxy"
-brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
+#brew "shopify/shopify/toxiproxy"
+#brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
 brew "git-extras"    # `git effort` for change hot spots etc
 brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that will check for secrets and prevent commiting them
 
@@ -108,7 +109,7 @@ brew "rustup-init"        # Rust the programming lang tooling - run to install/u
 brew "starship"          # cross-OS shell promt
 
 #brew "plantuml"    # transform textual repres. into a diagram, see http://plantuml.com/ ; via Kenneth Pedersen
-brew "geckodriver"  # WebDriver for Firefox - for https://github.com/igrishaev/etaoin
+#brew "geckodriver"  # WebDriver for Firefox - for https://github.com/igrishaev/etaoin
 brew "bat"          # better cat, w/ git integr. and syntax highl.: --language clojure
 brew "graphviz"     # incl. `dot` used by VS Code PlantUML plugin
 brew "fd"           # better find - https://github.com/sharkdp/fd
@@ -137,24 +138,23 @@ cask "docker" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker`
 cask "dropbox"
 #cask "emacs"
 cask "firefox"
-cask "google-chrome"
+#cask "google-chrome"
 cask "handbrake" # Video ripping / transforming
-cask "iterm2" #iterm2-beta
+#cask "iterm2" #iterm2-beta
 cask "jetbrains-toolbox"
 cask "keybase"
 cask "libreoffice" # due to a failing update to 7.5
 #cask "lighttable"
 cask "p4v" # formerly p4merge
 cask "qlmarkdown" # Markdown support for OSX Quikc Look previews
-cask "skype"
-cask "slack"
+#cask "skype"
 #cask "soundflower" # OSX extension so apps can pass audio to other ones, needs to permit ext. isntall; auth: Matt Ingalls
-#cask "spideroak"   # Fails 1/2020: "Error: Cask 'spideroak' definition is invalid: Token '{:v1=>"spideroak"}' in header line does not match the file name."
+cask "spideroakone"
 #cask "transmission" # Torrent client
 #cask "tunnelblick"
 #cask "vagrant"
 cask "vlc"
-cask "mucommander"
+#cask "mucommander"
 cask "aquaterm"   # for gnuplot without X11
 cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
@@ -162,12 +162,14 @@ cask "freeze"    # AWS Glacier client
 cask "rsyncosx"  # rsync UI
 cask "gpg-suite-no-mail" # make working with GPG signing (eg git commits) easier and integr. with Keychain
 cask "dash"      # document browser
-cask "sourcetree" # git repo browser etc
+#cask "sourcetree" # git repo browser etc
 cask "veracrypt" # ardoq
 cask "vivaldi"   # browser
 # cask "pop"   # https://pop.com/ - ScreenHero reborn - remote pairprogrammin
 cask "obsidian"  # https://obsidian.md - Markdown-based note mgmt app
-cask "temurin11" # OpenJDK by Eclipse, v.11 LTS; install before brewing lein / clojure
+cask "temurin@11" # OpenJDK by Eclipse, v.11 LTS; install before brewing lein / clojure
 cask "flux"      # change color, light scheme in the evening
 cask "raycast"   # app & cmd launcher, window management & much more
+cask "1password"
 cask "1password/tap/1password-cli" # 1Password 8+ CLI, called `op`
+cask "zoom"      # video conferencing
