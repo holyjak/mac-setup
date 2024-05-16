@@ -173,3 +173,4 @@ cask "raycast"   # app & cmd launcher, window management & much more
 cask "1password"
 cask "1password/tap/1password-cli" # 1Password 8+ CLI, called `op`
 cask "zoom"      # video conferencing
+cask "warp"      # better terminal w/ powerful text editing
