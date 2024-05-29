@@ -149,7 +149,6 @@ cask "p4v" # formerly p4merge
 cask "qlmarkdown" # Markdown support for OSX Quikc Look previews
 #cask "skype"
 #cask "soundflower" # OSX extension so apps can pass audio to other ones, needs to permit ext. isntall; auth: Matt Ingalls
-cask "spideroakone"
 #cask "transmission" # Torrent client
 #cask "tunnelblick"
 #cask "vagrant"
@@ -175,3 +174,5 @@ cask "1password/tap/1password-cli" # 1Password 8+ CLI, called `op`
 cask "zoom"      # video conferencing
 cask "warp"      # better terminal w/ powerful text editing
 cask "dbeaver-community" # DB access tool for Pg etc.
+cask "wolfram-engine" # Wolfram computational kernel
+cask "spideroakone"   # 2024/5 fails to download
