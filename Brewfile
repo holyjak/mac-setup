@@ -177,3 +177,4 @@ cask "warp"      # better terminal w/ powerful text editing
 cask "dbeaver-community" # DB access tool for Pg etc.
 cask "wolfram-engine" # Wolfram computational kernel
 cask "spideroakone"   # 2024/5 fails to download
+cask "PhotoSync"   # mobile app desktop companion
