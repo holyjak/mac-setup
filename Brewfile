@@ -13,6 +13,7 @@ tap "go-task/tap"
 tap "clojure/tools"
 tap "borkdude/brew"
 tap "clojure-lsp/brew"
+tap "dotenvx/brew"
 
 brew "go-task" # better make, for Channel API
 
@@ -121,6 +122,7 @@ brew "buildpacks/tap/pack" # buildpacks.io CLI tool for running Docker-based bui
 brew "flyctl" # the fly CLI for fly.io (of the same name as Concourse CI one)
 brew "git-delta" # syntax-highlighting diff pager for git etc
 #brew "difftastic" # syntax-highlighting diff pager for git, with change minimization (delta does that too?)
+brew "dotenvx/brew/dotenvx" # better .env support, with encryption
 ########################## APPS
 #cask "macfuse" # user-space filesystem support; sshfs needs to be installed manually from https://osxfuse.github.io/ ?
 #cask "chefdk" # chef development kit: chef + other tools
