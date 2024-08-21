@@ -181,3 +181,5 @@ cask "wolfram-engine" # Wolfram computational kernel
 cask "spideroakone"   # 2024/5 fails to download
 cask "PhotoSync"   # mobile app desktop companion
 cask "quarto"     # render scientific docs - used by SciCloj, wolframite
+#cask "inkscape"  # vector graphics editor
+cask "standard-notes" # desktop and mobile notes app, under Proton
