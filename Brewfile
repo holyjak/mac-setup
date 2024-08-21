@@ -178,7 +178,7 @@ cask "zoom"      # video conferencing
 cask "warp"      # better terminal w/ powerful text editing
 cask "dbeaver-community" # DB access tool for Pg etc.
 cask "wolfram-engine" # Wolfram computational kernel
-cask "spideroakone"   # 2024/5 fails to download
+# cask "spideroakone"   # Disabled because it is no longer available upstream - 2024-06-07.
 cask "PhotoSync"   # mobile app desktop companion
 cask "quarto"     # render scientific docs - used by SciCloj, wolframite
 #cask "inkscape"  # vector graphics editor
