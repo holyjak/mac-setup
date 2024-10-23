@@ -105,7 +105,7 @@ brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that 
 
 
 #brew "fzf"               # Interactive fuzzy search of stdin list: `ls | fzf` # Perf issues?!
-brew "rustup-init"        # Rust the programming lang tooling - run to install/update rust ('rust' lacks 'rustup)
+brew "rustup"             # Rust the programming lang tooling - run to install/update rust ('rust' lacks 'rustup)
 
 #brew "aws-sam-cli"       # AWS Lambda local dev etc.
 
