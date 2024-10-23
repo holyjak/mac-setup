@@ -26,8 +26,9 @@ brew "mas"
 mas "Evernote", id: 406056744
 mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top bar
 #mas "Octofile", id: 1463726615    # Android <> Mac file transfer mobile & desktop app
-mas "Slack", id: 803453959
+mas "Slack for Desktop", id: 803453959
 mas "Howler Timer", id: 428846772  # timer app with wolf sounds
+mas "DaVinci Resolve", id: 571213070 # awesome video editing SW for screen casts etc.
 
 ######################### Apps & CLIs
 
