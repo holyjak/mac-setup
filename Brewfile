@@ -29,6 +29,7 @@ mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top b
 mas "Slack for Desktop", id: 803453959
 mas "Howler Timer", id: 428846772  # timer app with wolf sounds
 mas "DaVinci Resolve", id: 571213070 # awesome video editing SW for screen casts etc.
+mas "CCMenu", id: 603117688 # Mac tray icon showing CI server build status
 
 ######################### Apps & CLIs
 
