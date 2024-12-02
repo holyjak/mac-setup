@@ -148,7 +148,7 @@ cask "firefox"
 cask "handbrake" # Video ripping / transforming
 #cask "iterm2" #iterm2-beta
 cask "jetbrains-toolbox"
-cask "keybase"
+#cask "keybase" # little used, currently failing to install
 cask "libreoffice" # due to a failing update to 7.5
 #cask "lighttable"
 cask "p4v" # formerly p4merge
