@@ -206,6 +206,9 @@ atom_plugins=(
 #      Ex.:
 #      sudo xattr -dr com.apple.quarantine /Applications/iTerm.app
 
+#--------------------------------- zsh
+./zsh-setup.sh
+
 #--------------------------------- LAST
 
 ## TODO: Update path in .profile
