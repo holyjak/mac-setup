@@ -26,7 +26,7 @@ brew "mas"
 mas "Evernote", id: 406056744
 mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top bar
 #mas "Octofile", id: 1463726615    # Android <> Mac file transfer mobile & desktop app
-mas "Slack for Desktop", id: 803453959
+#mas "Slack for Desktop", id: 803453959 # somehow keeps getting reinstalled
 mas "Howler Timer", id: 428846772  # timer app with wolf sounds
 mas "DaVinci Resolve", id: 571213070 # awesome video editing SW for screen casts etc.
 mas "CCMenu", id: 603117688 # Mac tray icon showing CI server build status
@@ -94,7 +94,7 @@ brew "s-nail" # CLI for sending emails (with custom From, remote SMTP server)
 #brew "terragrunt" # terraform wrapper
 #brew "vaulted"  # secrets manager for AWS
 brew "wget"
-brew "youtube-dl"  # youtube downloader https://rg3.github.io/youtube-dl/
+#brew "youtube-dl"  # youtube downloader https://rg3.github.io/youtube-dl/; outdated?!
 #brew "yq" # Process YAML from CLI
 #brew "shopify/shopify/toxiproxy"
 #brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
@@ -125,6 +125,7 @@ brew "flyctl" # the fly CLI for fly.io (of the same name as Concourse CI one)
 brew "git-delta" # syntax-highlighting diff pager for git etc
 #brew "difftastic" # syntax-highlighting diff pager for git, with change minimization (delta does that too?)
 brew "dotenvx/brew/dotenvx" # better .env support, with encryption
+brew "gh"  # GitHub CLI, needed for ardoq/SSHGate
 ########################## APPS
 #cask "macfuse" # user-space filesystem support; sshfs needs to be installed manually from https://osxfuse.github.io/ ?
 #cask "chefdk" # chef development kit: chef + other tools
@@ -185,3 +186,5 @@ cask "PhotoSync"   # mobile app desktop companion
 cask "quarto"     # render scientific docs - used by SciCloj, wolframite
 #cask "inkscape"  # vector graphics editor
 cask "standard-notes" # desktop and mobile notes app, under Proton
+cask "orbstack"  # Faster, ligher Docker Desktop replacement
+
