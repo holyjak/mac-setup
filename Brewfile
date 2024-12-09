@@ -63,7 +63,7 @@ brew "clojure-lsp/brew/clojure-lsp-native" # clojure-lsp LSP server for use with
 brew "borkdude/brew/babashka" 
 brew "borkdude/brew/jet" # JSON <> EDN <> Transit
 brew "babashka/brew/neil"
-# brew install borkdude/brew/clj-kondo
+brew "borkdude/brew/clj-kondo"
 
 brew "curl" #, args: ["with-openssl"] - not supported anymore?
 brew "ffmpeg" # ffprobe for extracting audio from video with youtube-dl
@@ -125,8 +125,13 @@ brew "flyctl" # the fly CLI for fly.io (of the same name as Concourse CI one)
 brew "git-delta" # syntax-highlighting diff pager for git etc
 #brew "difftastic" # syntax-highlighting diff pager for git, with change minimization (delta does that too?)
 brew "dotenvx/brew/dotenvx" # better .env support, with encryption
-brew "gh"  # GitHub CLI, needed for ardoq/SSHGate
+brew "gh"  # ardoq: GitHub CLI, needed for ardoq/SSHGate
+brew "openssh" # ardoq: built-in mac ssh does not support yubikey
+brew "pnpm" # ardoq: FE dependencies
+brew "node" # ardoq: needed by pnpm
+
 ########################## APPS
+
 #cask "macfuse" # user-space filesystem support; sshfs needs to be installed manually from https://osxfuse.github.io/ ?
 #cask "chefdk" # chef development kit: chef + other tools
 #cask "gitup" # better GitX, Git GUI
@@ -187,4 +192,3 @@ cask "quarto"     # render scientific docs - used by SciCloj, wolframite
 #cask "inkscape"  # vector graphics editor
 cask "standard-notes" # desktop and mobile notes app, under Proton
 cask "orbstack"  # Faster, ligher Docker Desktop replacement
-
