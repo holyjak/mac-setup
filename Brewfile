@@ -193,3 +193,4 @@ cask "quarto"     # render scientific docs - used by SciCloj, wolframite
 #cask "inkscape"  # vector graphics editor
 cask "standard-notes" # desktop and mobile notes app, under Proton
 cask "orbstack"  # Faster, ligher Docker Desktop replacement
+cask "ollama"    # run LLM locally - for Goose AI agent & other stuff; needs also the app (cask)
