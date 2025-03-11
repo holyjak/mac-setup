@@ -195,3 +195,5 @@ cask "standard-notes" # desktop and mobile notes app, under Proton
 cask "orbstack"  # Faster, ligher Docker Desktop replacement
 cask "ollama"    # run LLM locally - for Goose AI agent & other stuff; needs also the app (cask)
 cask "android-file-transfer" # transfer files Mac <> Android
+cask "visualvm"  # Visual monitoring and profiling tool for JVM
+
