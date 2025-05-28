@@ -130,6 +130,7 @@ brew "openssh" # ardoq: built-in mac ssh does not support yubikey
 brew "pnpm" # ardoq: FE dependencies
 brew "node" # ardoq: needed by pnpm
 brew "libdvdcss" # to enable Handbreak to rip copy-protected DVDs
+brew "aider" # aider.chat AI coding agent / pair-programmer; EXPERIMENTAL
 
 ########################## APPS
 
