@@ -147,12 +147,12 @@ cask "visual-studio-code"
 #brew "zeromq" # Atom Hydrogen dependency
 brew "sass/sass/sass" # For my blog; Dart SASS
 #cask "audacity"  # requires the old Snow Leopard version of OSX?
-cask "docker" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
+cask "docker-app" # Docker for Mac (i.e. Docker.app) as opposed to the `brew docker` CLI
 cask "dropbox"
 #cask "emacs"
 cask "firefox"
 #cask "google-chrome"
-cask "handbrake" # Video ripping / transforming
+cask "handbrake-app" # Video ripping / transforming
 #cask "iterm2" #iterm2-beta
 cask "jetbrains-toolbox"
 #cask "keybase" # little used, currently failing to install
@@ -171,7 +171,7 @@ cask "aquaterm"   # for gnuplot without X11
 cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
 # cask "keycast" # display keys typed on screen - for screencasts
-cask "rsyncosx"  # rsync UI
+cask "rsyncui"  # rsync UI
 cask "gpg-suite-no-mail" # make working with GPG signing (eg git commits) easier and integr. with Keychain
 cask "dash"      # document browser
 #cask "sourcetree" # git repo browser etc
@@ -180,7 +180,7 @@ cask "vivaldi"   # browser
 # cask "pop"   # https://pop.com/ - ScreenHero reborn - remote pairprogrammin
 cask "obsidian"  # https://obsidian.md - Markdown-based note mgmt app
 cask "temurin@11" # OpenJDK by Eclipse, v.11 LTS; install before brewing lein / clojure
-cask "flux"      # change color, light scheme in the evening
+cask "flux-app"      # change color, light scheme in the evening
 cask "raycast"   # app & cmd launcher, window management & much more
 cask "1password"
 cask "1password/tap/1password-cli" # 1Password 8+ CLI, called `op`
@@ -194,7 +194,7 @@ cask "quarto"     # render scientific docs - used by SciCloj, wolframite
 #cask "inkscape"  # vector graphics editor
 cask "standard-notes" # desktop and mobile notes app, under Proton
 cask "orbstack"  # Faster, ligher Docker Desktop replacement
-cask "ollama"    # run LLM locally - for Goose AI agent & other stuff; needs also the app (cask)
+cask "ollama-app"    # run LLM locally - for Goose AI agent & other stuff; needs also the app (cask)
 cask "android-file-transfer" # transfer files Mac <> Android
 cask "visualvm"  # Visual monitoring and profiling tool for JVM
 
