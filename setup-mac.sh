@@ -74,22 +74,22 @@ if [ ! -f ~/.gemrc ]; then
   export GEM_HOME="$(brew --prefix)/opt/gems"
   export GEM_PATH="$(brew --prefix)/opt/gems"
   echo "gem: -n/usr/local/bin" > ~/.gemrc
-  gem install -n /usr/local/bin puppet-lint
+#  gem install -n /usr/local/bin puppet-lint
   gem install -n /usr/local/bin github-pages
-  gem install -n /usr/local/bin bundler
+#  gem install -n /usr/local/bin bundler
 fi
 
 #--------------------------------- PYTHON
-echo ">> Installing python packages..."
-python_packages=(
-  boto
-  boto3
- "ipython[notebook]"   # Atom Hydrogen dependency
- jinja2 tornado jsonschema pyzmq # IJavascript -> Atom Hydrogen dependency
- virtualfish # Fish wrapper around virtualenv, see http://virtualfish.readthedocs.org/en/latest/install.html
- jmespath-terminal # cat my.json | jpterm # => interactive json query
-)
-pip3 install ${python_packages[@]}
+#echo ">> Installing python packages..."
+#python_packages=(
+#  boto
+#  boto3
+# "ipython[notebook]"   # Atom Hydrogen dependency
+# jinja2 tornado jsonschema pyzmq # IJavascript -> Atom Hydrogen dependency
+# virtualfish # Fish wrapper around virtualenv, see http://virtualfish.readthedocs.org/en/latest/install.html
+# jmespath-terminal # cat my.json | jpterm # => interactive json query
+#)
+#pip3 install ${python_packages[@]}
 
 # --------------------------------- NODE PACKAGES
 # echo ">> Installing npm packages..."
