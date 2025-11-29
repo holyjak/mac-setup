@@ -30,9 +30,9 @@ mas "MenubarClock", id: 492167985 # display up to 5 world times in the Mac top b
 mas "Howler Timer", id: 428846772  # timer app with wolf sounds
 mas "DaVinci Resolve", id: 571213070 # awesome video editing SW for screen casts etc.
 mas "CCMenu", id: 603117688 # Mac tray icon showing CI server build status
-mas "Microsoft OneNote", id: 784801555 # Notes app
+#mas "Microsoft OneNote", id: 784801555 # Notes app
 
-######################### Apps & CLIs
+######################### APPS & CLIs
 
 cask "temurin" # OpenJDK by Eclipse, LTS; install before brewing lein / clojure; TODO: Change to temurin17 once v18 out
 
@@ -133,6 +133,7 @@ brew "node" # ardoq: needed by pnpm
 brew "libdvdcss" # to enable Handbreak to rip copy-protected DVDs
 #brew "aider" # aider.chat AI coding agent / pair-programmer; EXPERIMENTAL
 brew "claude-code" # AI
+brew "mcp-toolbox" # AI mcp server for DBs: https://github.com/googleapis/genai-toolbox -> CLI `toolbox`
 
 ########################## APPS
 
@@ -196,7 +197,7 @@ cask "quarto"     # render scientific docs - used by SciCloj, wolframite
 #cask "inkscape"  # vector graphics editor
 cask "standard-notes" # desktop and mobile notes app, under Proton
 cask "orbstack"  # Faster, ligher Docker Desktop replacement
-cask "ollama-app"    # run LLM locally - for Goose AI agent & other stuff; needs also the app (cask)
+#<not available anymore>cask "ollama-app"    # run LLM locally - for Goose AI agent & other stuff; needs also the app (cask)
 cask "android-file-transfer" # transfer files Mac <> Android
 cask "visualvm"  # Visual monitoring and profiling tool for JVM
-
+cask "adobe-digital-editions" # convert Kobo.com books to ePub & more
