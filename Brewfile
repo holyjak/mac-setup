@@ -201,3 +201,4 @@ cask "orbstack"  # Faster, ligher Docker Desktop replacement
 cask "android-file-transfer" # transfer files Mac <> Android
 cask "visualvm"  # Visual monitoring and profiling tool for JVM
 cask "adobe-digital-editions" # convert Kobo.com books to ePub & more
+cask "calibre" # Free e-book manager and converter; see also https://github.com/noDRM/DeDRM_tools plugin for Kindle/Kobo/...
