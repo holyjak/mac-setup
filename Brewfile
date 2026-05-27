@@ -14,6 +14,7 @@ tap "clojure/tools"
 tap "borkdude/brew"
 tap "clojure-lsp/brew"
 tap "dotenvx/brew"
+tap "weavejester/brew"
 
 brew "go-task" # better make, for Channel API
 
@@ -134,6 +135,8 @@ brew "libdvdcss" # to enable Handbreak to rip copy-protected DVDs
 #brew "aider" # aider.chat AI coding agent / pair-programmer; EXPERIMENTAL
 brew "claude-code" # AI
 brew "mcp-toolbox" # AI mcp server for DBs: https://github.com/googleapis/genai-toolbox -> CLI `toolbox`
+brew "babashka/brew/bbin" # Babashka package manager -> github.com/bhauman/clojure-mcp-light
+brew "weavejester/brew/cljfmt" # Clojure formatter, while DIY in IntelliJ, until Cursive bakes it in
 
 ########################## APPS
 
@@ -171,7 +174,7 @@ cask "qlmarkdown" # Markdown support for OSX Quikc Look previews
 cask "vlc"
 #cask "mucommander"
 cask "aquaterm"   # for gnuplot without X11
-cask "adobe-acrobat-reader"
+# cask "adobe-acrobat-reader"
 cask "freeze"    # AWS Glacier client
 # cask "keycast" # display keys typed on screen - for screencasts
 cask "rsyncui"  # rsync UI
