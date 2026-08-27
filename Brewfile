@@ -5,18 +5,19 @@ cask_args appdir: "/Applications"
 tap "homebrew/bundle"
 #tap "homebrew/cask-versions" # not exists anymore?
 #tap "nlf/dhyve"
-tap "shopify/shopify"
-tap "simeji/jid"
+#tap "shopify/shopify"
+#tap "simeji/jid"
 tap "adoptopenjdk/openjdk"
-tap "aws/tap"
-tap "go-task/tap"
+#tap "aws/tap"
+#tap "go-task/tap"
 tap "clojure/tools"
 tap "borkdude/brew"
 tap "clojure-lsp/brew"
 tap "dotenvx/brew"
 tap "weavejester/brew"
+tap "nats-io/nats-tools" # `nats` CLI for the messaging queue NATS
 
-brew "go-task" # better make, for Channel API
+#brew "go-task" # better make, for Channel API project
 
 ########################## Mac App Store
 # See mas list
@@ -99,7 +100,7 @@ brew "wget"
 #brew "youtube-dl"  # youtube downloader https://rg3.github.io/youtube-dl/; outdated?!
 #brew "yq" # Process YAML from CLI
 #brew "shopify/shopify/toxiproxy"
-#brew "simeji/jid/jid" # Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
+#brew "simeji/jid/jid" # [TRY] Json Incremental Digger - drill down JSON interactively by using filtering queries like jq
 brew "git-extras"    # `git effort` for change hot spots etc
 brew "git-secrets"   # `git secrets --install` in a repo do add a git hook that will check for secrets and prevent commiting them
 
@@ -133,10 +134,11 @@ brew "pnpm" # ardoq: FE dependencies
 brew "node" # ardoq: needed by pnpm
 brew "libdvdcss" # to enable Handbreak to rip copy-protected DVDs
 #brew "aider" # aider.chat AI coding agent / pair-programmer; EXPERIMENTAL
-brew "claude-code" # AI
+brew "claude-code@latest" # AI
 brew "mcp-toolbox" # AI mcp server for DBs: https://github.com/googleapis/genai-toolbox -> CLI `toolbox`
 brew "babashka/brew/bbin" # Babashka package manager -> github.com/bhauman/clojure-mcp-light
-brew "weavejester/brew/cljfmt" # Clojure formatter, while DIY in IntelliJ, until Cursive bakes it in
+brew "weavejester/brew/cljfmt" # Clojure formatter, while DIY in IntelliJ, until Cursive bakes it wn
+brew "nats-io/nats-tools/nats" # [Ardoq] CLI for the NATS messaging queue
 
 ########################## APPS
 
@@ -205,3 +207,4 @@ cask "android-file-transfer" # transfer files Mac <> Android
 cask "visualvm"  # Visual monitoring and profiling tool for JVM
 cask "adobe-digital-editions" # convert Kobo.com books to ePub & more
 cask "calibre" # Free e-book manager and converter; see also https://github.com/noDRM/DeDRM_tools plugin for Kindle/Kobo/...
+cask "spokenly" # [TRY] https://spokenly.app/ voice to text app w/ local models
