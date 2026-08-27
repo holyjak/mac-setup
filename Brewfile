@@ -20,7 +20,7 @@ tap "nats-io/nats-tools" # `nats` CLI for the messaging queue NATS
 #brew "go-task" # better make, for Channel API project
 
 ########################## Mac App Store
-# See `mas list`
+# See mas list
 brew "mas"
 # `mas list` - apps installed via M.A.S., `mas search 1Password`
 # mas "1Password 7", id: 1333542190 # FIXME 1Password 8 not available in the store yet (only for iDevices)
@@ -33,7 +33,6 @@ mas "Howler Timer", id: 428846772  # timer app with wolf sounds
 mas "DaVinci Resolve", id: 571213070 # awesome video editing SW for screen casts etc.
 mas "CCMenu", id: 603117688 # Mac tray icon showing CI server build status
 #mas "Microsoft OneNote", id: 784801555 # Notes app
-mas "Spokenly 2", id: 6740315592 # [TRY] https://spokenly.app/ voice to text app w/ local models
 
 ######################### APPS & CLIs
 
@@ -208,3 +207,4 @@ cask "visualvm"  # Visual monitoring and profiling tool for JVM
 cask "adobe-digital-editions" # convert Kobo.com books to ePub & more
 cask "calibre" # Free e-book manager and converter; see also https://github.com/noDRM/DeDRM_tools plugin for Kindle/Kobo/...
 cask "claude-code@latest" # [Ardoq] AI coding assistant
+cask "spokenly" # [TRY] https://spokenly.app/ voice to text app w/ local models
