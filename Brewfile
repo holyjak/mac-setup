@@ -134,7 +134,6 @@ brew "pnpm" # ardoq: FE dependencies
 brew "node" # ardoq: needed by pnpm
 brew "libdvdcss" # to enable Handbreak to rip copy-protected DVDs
 #brew "aider" # aider.chat AI coding agent / pair-programmer; EXPERIMENTAL
-brew "claude-code@latest" # AI
 brew "mcp-toolbox" # AI mcp server for DBs: https://github.com/googleapis/genai-toolbox -> CLI `toolbox`
 brew "babashka/brew/bbin" # Babashka package manager -> github.com/bhauman/clojure-mcp-light
 brew "weavejester/brew/cljfmt" # Clojure formatter, while DIY in IntelliJ, until Cursive bakes it wn
@@ -207,4 +206,5 @@ cask "android-file-transfer" # transfer files Mac <> Android
 cask "visualvm"  # Visual monitoring and profiling tool for JVM
 cask "adobe-digital-editions" # convert Kobo.com books to ePub & more
 cask "calibre" # Free e-book manager and converter; see also https://github.com/noDRM/DeDRM_tools plugin for Kindle/Kobo/...
+cask "claude-code@latest" # [Ardoq] AI coding assistant
 cask "spokenly" # [TRY] https://spokenly.app/ voice to text app w/ local models
