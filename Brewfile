@@ -208,3 +208,4 @@ cask "adobe-digital-editions" # convert Kobo.com books to ePub & more
 cask "calibre" # Free e-book manager and converter; see also https://github.com/noDRM/DeDRM_tools plugin for Kindle/Kobo/...
 cask "claude-code@latest" # [Ardoq] AI coding assistant
 cask "spokenly" # [TRY] https://spokenly.app/ voice to text app w/ local models
+cask "zed" # [TRY] https://zed.dev/ editor written in Rust, w/ AI support and collaboration built-in
